@@ -1,0 +1,156 @@
+/*
+ * Estilos del cascarón de la aplicación (App.jsx) — barra de navegación,
+ * contenedor de vistas y vista de diapositivas.
+ *
+ * Aplica la identidad de marca Blend: barra de navegación en squid ink con
+ * acento turquesa, contenedor de contenido sobre hueso, y encabezado de
+ * diapositivas con degradado y motivo de ondas. Consume los tokens de
+ * theme.css.
+ */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-fondo);
+}
+
+/* --- Barra de navegación principal (squid ink + acento turquesa) -------- */
+.app__cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--grad-marca);
+  box-shadow: var(--sombra-md);
+}
+
+.app__nav {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: var(--espacio-2) var(--espacio-4);
+}
+
+.app__nav-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.app__nav-item {
+  display: flex;
+}
+
+.app__nav-boton {
+  min-height: 40px;
+  padding: var(--espacio-2) var(--espacio-4);
+  border: 1px solid transparent;
+  border-radius: var(--radio-pildora);
+  background: transparent;
+  color: rgba(242, 240, 235, 0.82);
+  font-weight: var(--peso-semi);
+  font-size: var(--texto-sm);
+  letter-spacing: 0.01em;
+}
+
+.app__nav-boton:hover:not(:disabled) {
+  background: rgba(0, 224, 224, 0.12);
+  color: var(--color-turquesa-200);
+  border-color: rgba(0, 224, 224, 0.3);
+}
+
+/* Vista activa: píldora turquesa sobre el azul profundo. */
+.app__nav-boton[aria-current='page'] {
+  background: var(--color-turquesa);
+  color: var(--color-squid-ink);
+  border-color: var(--color-turquesa);
+  box-shadow: var(--sombra-acento);
+}
+
+.app__nav-boton[aria-current='page']:hover {
+  background: var(--color-turquesa-400);
+  color: var(--color-squid-ink);
+}
+
+/* --- Contenido / vista activa ------------------------------------------ */
+.app__contenido {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.app__vista {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: var(--espacio-6) var(--espacio-5) var(--espacio-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-6);
+}
+
+/* La vista Home gestiona su propio ancho/espaciado. */
+.app__vista--home {
+  padding: 0;
+  max-width: none;
+}
+
+/* Vista de diapositivas: ocupa alto completo con fondo oscuro de proyección. */
+.app__vista--slides {
+  max-width: none;
+  padding: var(--espacio-4) var(--espacio-5) var(--espacio-6);
+  gap: var(--espacio-3);
+  background: var(--grad-marca);
+}
+
+.app__slides-barra {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.app__slides-contenedor {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+}
+
+/* Botón de abrir/cerrar modo presentador: contorno turquesa sobre oscuro. */
+.app__boton-presentador {
+  border: 1px solid var(--color-turquesa);
+  border-radius: var(--radio-pildora);
+  background: transparent;
+  color: var(--color-turquesa-200);
+  font-weight: var(--peso-semi);
+  font-size: var(--texto-sm);
+  min-height: 40px;
+  padding: var(--espacio-2) var(--espacio-5);
+}
+
+.app__boton-presentador:hover:not(:disabled) {
+  background: rgba(0, 224, 224, 0.14);
+  color: var(--color-turquesa-200);
+}
+
+.app__boton-presentador[aria-pressed='true'] {
+  background: var(--color-turquesa);
+  color: var(--color-squid-ink);
+}
+
+@media (max-width: 768px) {
+  .app__nav {
+    padding: var(--espacio-2);
+  }
+
+  .app__nav-lista {
+    gap: var(--espacio-1);
+  }
+
+  .app__vista {
+    padding: var(--espacio-5) var(--espacio-4) var(--espacio-6);
+    gap: var(--espacio-5);
+  }
+}

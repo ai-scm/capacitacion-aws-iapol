@@ -1,0 +1,12 @@
+/*
+ * Punto de entrada de estilos de la Plataforma.
+ *
+ * Agrega el tema de marca Blend (variables), los estilos base/responsive y el
+ * cascarón de la aplicación en un único archivo importable desde src/main.jsx.
+ * El orden importa: primero el tema para que las variables estén disponibles
+ * para base.css, app.css y para los estilos de componentes.
+ */
+
+@import './theme.css';
+@import './base.css';
+@import './app.css';

@@ -1,0 +1,152 @@
+/*
+ * Tema de marca Blend — tarea de rediseño visual.
+ *
+ * CSS plano con variables (custom properties) como única fuente de verdad del
+ * tema. La paleta y la tipografía siguen el Brand Toolkit de Blend360:
+ *   - Squid Ink (azul profundo) para fondos y navegación.
+ *   - Vivid Turquoise (turquesa) como acento vibrante (NO sobre blanco puro,
+ *     conforme a la guía de marca: se usa sobre fondos oscuros o en bordes).
+ *   - Hueso/off-white para superficies claras y legibilidad.
+ *   - Slate (gris azulado) como neutro secundario.
+ *   - Tipografía Montserrat (con fallback de sistema).
+ *
+ * Los tres planos (Quick real / Simulación local / proceso IAPOL) conservan su
+ * diferenciación (R21.1) con tokens derivados de esta paleta. No se usa ningún
+ * framework CSS ni recursos de CDN en runtime (R23.3): la fuente Montserrat se
+ * declara con fallback de sistema para no depender de una CDN; si se desea la
+ * tipográfica exacta puede empaquetarse localmente como @font-face.
+ */
+
+:root {
+  /* --- Paleta de marca Blend ------------------------------------------- */
+  /* Squid Ink: azul profundo de marca (fondos, navegación, titulares). */
+  --color-squid-ink: #002b49;
+  --color-squid-ink-700: #003057;
+  --color-squid-ink-900: #16212e;
+  --color-squid-ink-950: #0b1622;
+
+  /* Vivid Turquoise: acento de marca (sobre fondos oscuros / bordes). */
+  --color-turquesa: #00e0e0;
+  --color-turquesa-400: #2bd9d9;
+  --color-turquesa-200: #9bf0f0;
+  /* Turquesa "seguro" sobre claro: versión apagada para texto sobre hueso. */
+  --color-turquesa-texto: #0a7b86;
+
+  /* Azul de enlace / información. */
+  --color-azul: #0972d3;
+  --color-azul-oscuro: #033160;
+
+  /* Slate: neutro azulado secundario. */
+  --color-slate: #2e3f4a;
+  --color-slate-600: #44546a;
+  --color-slate-400: #5f6b7a;
+
+  /* Neutros claros (hueso de marca). */
+  --color-hueso: #f2f0eb;
+  --color-hueso-200: #e9e6df;
+  --color-fondo: #f2f0eb;
+  --color-superficie: #ffffff;
+  --color-superficie-alt: #eceae3;
+  --color-borde: #d9d6cd;
+  --color-borde-fuerte: #b9b5a9;
+
+  /* Texto. */
+  --color-texto: #16212e;
+  --color-texto-suave: #44546a;
+  --color-texto-invertido: #f2f0eb;
+
+  /* Estados semánticos (derivados, armónicos con la marca). */
+  --color-exito: #1a7f6b;
+  --color-exito-bg: #e2f3ee;
+  --color-advertencia: #8a5a00;
+  --color-advertencia-bg: #fbf0da;
+  --color-error: #b3261e;
+  --color-error-bg: #fdecea;
+  --color-info: var(--color-squid-ink-700);
+  --color-info-bg: #e2eef7;
+
+  /* Acentos de marca (acción primaria = turquesa de marca). */
+  --color-primario: var(--color-turquesa);
+  --color-primario-hover: var(--color-turquesa-400);
+  --color-sobre-primario: var(--color-squid-ink);
+  --color-enfoque: var(--color-turquesa-400);
+
+  /* Degradados de marca (portadas, encabezados, botones). */
+  --grad-marca: linear-gradient(135deg, #003057 0%, #002b49 55%, #16212e 100%);
+  --grad-marca-acento: linear-gradient(120deg, #002b49 0%, #0a4a6e 60%, #0a7b86 100%);
+  --grad-turquesa: linear-gradient(135deg, #00e0e0 0%, #2bd9d9 100%);
+
+  /* --- Tipografía (Montserrat) ----------------------------------------- */
+  --fuente-base: 'Montserrat', 'Segoe UI', system-ui, -apple-system,
+    'Helvetica Neue', Arial, sans-serif;
+  --fuente-titulo: 'Montserrat', 'Segoe UI', system-ui, -apple-system,
+    'Helvetica Neue', Arial, sans-serif;
+  --fuente-mono: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo',
+    monospace;
+
+  --texto-xs: 0.75rem;
+  --texto-sm: 0.875rem;
+  --texto-base: 1rem;
+  --texto-lg: 1.125rem;
+  --texto-xl: 1.375rem;
+  --texto-2xl: 1.75rem;
+  --texto-3xl: 2.25rem;
+  --texto-4xl: 3rem;
+
+  --interlineado: 1.6;
+  --peso-normal: 400;
+  --peso-medio: 500;
+  --peso-semi: 600;
+  --peso-fuerte: 700;
+  --peso-extra: 800;
+
+  /* --- Espaciado (escala de 4px) --------------------------------------- */
+  --espacio-1: 0.25rem;
+  --espacio-2: 0.5rem;
+  --espacio-3: 0.75rem;
+  --espacio-4: 1rem;
+  --espacio-5: 1.5rem;
+  --espacio-6: 2rem;
+  --espacio-8: 3rem;
+
+  /* --- Radios y sombras ------------------------------------------------ */
+  --radio-sm: 6px;
+  --radio-md: 10px;
+  --radio-lg: 18px;
+  --radio-pildora: 999px;
+
+  --sombra-sm: 0 1px 3px rgba(0, 43, 73, 0.1);
+  --sombra-md: 0 4px 14px rgba(0, 43, 73, 0.14);
+  --sombra-lg: 0 12px 32px rgba(0, 43, 73, 0.2);
+  /* Sombra con tinte turquesa para estados activos/hover de marca. */
+  --sombra-acento: 0 6px 20px rgba(0, 224, 224, 0.28);
+
+  /* --- Interacción táctil (R17.3) -------------------------------------- */
+  --objetivo-toque-min: 44px;
+
+  /* --- Transiciones (R6.1, R6.3) --------------------------------------- */
+  --duracion-transicion: 260ms;
+  --duracion-transicion-max: 600ms;
+  --curva-transicion: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  /* --- Tokens de color de los tres planos (R21.1) ---------------------- */
+  /* Plano "Amazon Quick real": tono informativo (azul de marca). */
+  --badge-plano-quick-real-bg: var(--color-info-bg);
+  --badge-plano-quick-real-fg: var(--color-squid-ink-700);
+  --badge-plano-quick-real-border: #9cc3e0;
+
+  /* Plano "Simulación local": tono de acento turquesa (atención). */
+  --badge-plano-simulacion-bg: #d6f7f7;
+  --badge-plano-simulacion-fg: #0a5c63;
+  --badge-plano-simulacion-border: #58dcdc;
+
+  /* Plano "Proceso institucional IAPOL": tono institucional (violeta). */
+  --badge-plano-iapol-bg: #efeafb;
+  --badge-plano-iapol-fg: #4b2e83;
+  --badge-plano-iapol-border: #c3b2e8;
+
+  /* --- Motivo gráfico de ondas Blend ----------------------------------- */
+  /* Color de las elipses concéntricas decorativas del logo. */
+  --onda-color: rgba(0, 224, 224, 0.14);
+  --onda-color-fuerte: rgba(0, 224, 224, 0.22);
+}

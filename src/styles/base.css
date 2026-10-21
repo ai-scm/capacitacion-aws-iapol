@@ -1,0 +1,263 @@
+/*
+ * Estilos globales/base y utilidades responsive de la Plataforma.
+ *
+ * Consume los tokens de marca definidos en theme.css. Cubre:
+ *   - Reset ligero y tipografía base legible (R17.2), con Montserrat de marca.
+ *   - Estilos base de botones/enlaces con objetivo de toque accesible (R17.3).
+ *   - Helpers de transición ≤600 ms reutilizables por la vista de diapositivas
+ *     (R6.1, R6.3) y respeto de `prefers-reduced-motion` (R6.2).
+ *   - Media query para viewport ≤768 px que adapta los controles de navegación
+ *     (R17.1).
+ *   - Motivo gráfico de ondas Blend reutilizable como fondo decorativo.
+ *
+ * No hay dependencias externas ni recursos de CDN en runtime (R23.3): la fuente
+ * Montserrat se aplica si está disponible en el sistema; en caso contrario, se
+ * usa el fallback de sistema declarado en --fuente-base.
+ */
+
+/* --- Reset ligero ------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente-base);
+  font-size: var(--texto-base);
+  line-height: var(--interlineado);
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Tipografía (legibilidad en escritorio/tableta/móvil, R17.2) -------- */
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 var(--espacio-3);
+  line-height: 1.2;
+  font-family: var(--fuente-titulo);
+  font-weight: var(--peso-fuerte);
+  color: var(--color-texto);
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: var(--texto-3xl); }
+h2 { font-size: var(--texto-2xl); }
+h3 { font-size: var(--texto-xl); }
+h4 { font-size: var(--texto-lg); }
+
+p {
+  margin: 0 0 var(--espacio-4);
+  max-width: 70ch;
+}
+
+a {
+  color: var(--color-azul);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--color-azul-oscuro);
+}
+
+code,
+pre {
+  font-family: var(--fuente-mono);
+  font-size: 0.9em;
+}
+
+/* --- Foco visible accesible -------------------------------------------- */
+:focus-visible {
+  outline: 2px solid var(--color-enfoque);
+  outline-offset: 2px;
+}
+
+/* --- Botones base con objetivo de toque accesible (R17.3) --------------- */
+button {
+  font-family: inherit;
+  font-size: var(--texto-base);
+  line-height: var(--interlineado);
+  color: var(--color-texto);
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde-fuerte);
+  border-radius: var(--radio-md);
+  min-height: var(--objetivo-toque-min);
+  min-width: var(--objetivo-toque-min);
+  padding: var(--espacio-2) var(--espacio-4);
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background-color var(--duracion-transicion) var(--curva-transicion),
+    border-color var(--duracion-transicion) var(--curva-transicion),
+    color var(--duracion-transicion) var(--curva-transicion),
+    box-shadow var(--duracion-transicion) var(--curva-transicion),
+    transform var(--duracion-transicion) var(--curva-transicion);
+}
+
+button:hover:not(:disabled) {
+  background-color: var(--color-superficie-alt);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Variante de acción primaria (turquesa de marca sobre squid ink). */
+.boton-primario {
+  background: var(--grad-turquesa);
+  border-color: transparent;
+  color: var(--color-sobre-primario);
+  font-weight: var(--peso-fuerte);
+  box-shadow: var(--sombra-sm);
+}
+
+.boton-primario:hover:not(:disabled) {
+  background: var(--color-turquesa-400);
+  color: var(--color-sobre-primario);
+  box-shadow: var(--sombra-acento);
+  transform: translateY(-1px);
+}
+
+/* --- Utilidades de disposición ----------------------------------------- */
+.contenedor-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- Motivo gráfico de ondas Blend ------------------------------------- */
+/*
+ * Patrón de elipses concéntricas inspirado en el símbolo de Blend. Se aplica
+ * como fondo decorativo (aria-hidden por ser puramente estético) sobre
+ * superficies de marca. Usa gradientes radiales repetidos para dibujar los
+ * "anillos" sin imágenes externas (R23.3). Colocar en un contenedor con
+ * position: relative y añadir la clase .ondas-blend a un hijo absoluto.
+ */
+.ondas-blend {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.ondas-blend::before,
+.ondas-blend::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -10%;
+  width: 70%;
+  aspect-ratio: 1 / 1;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: 2px solid var(--onda-color);
+  box-shadow:
+    0 0 0 28px transparent,
+    0 0 0 30px var(--onda-color),
+    0 0 0 58px transparent,
+    0 0 0 60px var(--onda-color);
+}
+
+.ondas-blend::after {
+  width: 48%;
+  right: 4%;
+  border-color: var(--onda-color-fuerte);
+  box-shadow:
+    0 0 0 22px transparent,
+    0 0 0 24px var(--onda-color-fuerte);
+}
+
+/* Variante sutil para encabezados claros. */
+.ondas-blend--suave::before,
+.ondas-blend--suave::after {
+  border-color: rgba(0, 43, 73, 0.06);
+  box-shadow:
+    0 0 0 28px transparent,
+    0 0 0 30px rgba(0, 43, 73, 0.06),
+    0 0 0 58px transparent,
+    0 0 0 60px rgba(0, 43, 73, 0.06);
+}
+
+/* --- Helpers de transición de diapositiva (R6.1, R6.3) ------------------ */
+.transicion-diapositiva {
+  transition: opacity var(--duracion-transicion-max) var(--curva-transicion),
+    transform var(--duracion-transicion-max) var(--curva-transicion);
+}
+
+.transicion-diapositiva--entrando {
+  opacity: 0;
+  transform: translateX(2%);
+}
+
+.transicion-diapositiva--activa {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* --- Preferencia de movimiento reducido (R6.2) -------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .transicion-diapositiva {
+    transition: none;
+  }
+
+  .transicion-diapositiva--entrando {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* --- Responsive: viewport ≤768 px (R17.1) ------------------------------- */
+@media (max-width: 768px) {
+  body {
+    font-size: calc(var(--texto-base) + 0.0625rem);
+  }
+
+  h1 { font-size: var(--texto-2xl); }
+  h2 { font-size: var(--texto-xl); }
+  h3 { font-size: var(--texto-lg); }
+
+  .controles-navegacion {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--espacio-3);
+    padding: var(--espacio-3);
+  }
+
+  .controles-navegacion button {
+    width: 100%;
+    min-height: calc(var(--objetivo-toque-min) + 4px);
+  }
+}
