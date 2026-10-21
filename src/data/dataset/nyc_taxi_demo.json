@@ -1,0 +1,2259 @@
+{
+  "_meta": {
+    "descripcion": "Subconjunto SINTÉTICO/DERIVADO inspirado en los NYC Yellow Taxi Trip Records de enero de 2024. Datos públicos de ejemplo con fines educativos; NO son los registros oficiales de la NYC TLC.",
+    "fuente_conceptual": "NYC Taxi & Limousine Commission (TLC) Trip Record Data",
+    "periodo": "2024-01",
+    "naturaleza": "datos_publicos_de_ejemplo_sinteticos",
+    "advertencia": "Los nombres, tipos, nulos y valores codificados deben confirmarse contra los archivos y el diccionario de datos oficiales de la NYC TLC antes de un laboratorio real. Los filtros modifican la población analizada y no representan la totalidad del origen.",
+    "total_registros": 320,
+    "campos": [
+      "tpep_pickup_datetime",
+      "payment_type",
+      "passenger_count",
+      "trip_distance",
+      "total_amount"
+    ]
+  },
+  "registros": [
+    {
+      "tpep_pickup_datetime": "2024-01-01T01:15:58",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 0.73,
+      "total_amount": 7.63
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-01T01:51:35",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 4.81,
+      "total_amount": 17.83
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-01T04:25:13",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 4.09,
+      "total_amount": 16.02
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-01T12:00:00",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.29,
+      "total_amount": 12.8
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-01T12:26:54",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 2.42,
+      "total_amount": 10.85
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-01T14:04:09",
+      "payment_type": 4,
+      "passenger_count": 1,
+      "trip_distance": 0.88,
+      "total_amount": 1.4
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-01T15:39:42",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 3.17,
+      "total_amount": 15.87
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-01T19:39:00",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.26,
+      "total_amount": 12.73
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-01T22:18:54",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.28,
+      "total_amount": 13.06
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-02T07:29:01",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 6.95,
+      "total_amount": 27.91
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-02T08:08:57",
+      "payment_type": 1,
+      "passenger_count": 5,
+      "trip_distance": 0.77,
+      "total_amount": 11.03
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-02T08:44:40",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 7.76,
+      "total_amount": 33.51
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-02T09:22:46",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 5.03,
+      "total_amount": 24.25
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-02T09:27:27",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 0.58,
+      "total_amount": 10.21
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-02T09:38:41",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 2.91,
+      "total_amount": 14.58
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-02T11:10:37",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.88,
+      "total_amount": 11.74
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-02T17:33:44",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 9.35,
+      "total_amount": 38.69
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-02T18:51:52",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 4.38,
+      "total_amount": 20.24
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-02T22:09:09",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 0.73,
+      "total_amount": 9.17
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-02T23:40:52",
+      "payment_type": 1,
+      "passenger_count": 3,
+      "trip_distance": 4.43,
+      "total_amount": 18.62
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-03T06:12:42",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 5.31,
+      "total_amount": 20.62
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-03T06:38:53",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.31,
+      "total_amount": 9.29
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-03T13:21:59",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 0.93,
+      "total_amount": 8.46
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-03T16:28:18",
+      "payment_type": 1,
+      "passenger_count": 6,
+      "trip_distance": 0.58,
+      "total_amount": 6.83
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-03T18:31:58",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 2.24,
+      "total_amount": 12.9
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-04T00:03:35",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 4.01,
+      "total_amount": 15.83
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-04T00:25:33",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 1.13,
+      "total_amount": 8.63
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-04T06:10:05",
+      "payment_type": 1,
+      "passenger_count": 3,
+      "trip_distance": 7.46,
+      "total_amount": 29.51
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-04T17:28:50",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 0.54,
+      "total_amount": 10.08
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-04T22:47:36",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 0.71,
+      "total_amount": 8.23
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-05T07:49:04",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 0.42,
+      "total_amount": 6.35
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-05T09:04:15",
+      "payment_type": 3,
+      "passenger_count": 1,
+      "trip_distance": 12.65,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-05T09:26:46",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 5.68,
+      "total_amount": 21.5
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-05T11:32:03",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 0.57,
+      "total_amount": 6.89
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-05T12:12:00",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.61,
+      "total_amount": 10.56
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-05T14:49:06",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 3.83,
+      "total_amount": 17.29
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-05T18:02:18",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 15.72,
+      "total_amount": 46.6
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-05T18:38:28",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.45,
+      "total_amount": 16.28
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-05T18:44:40",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.04,
+      "total_amount": 14.57
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-05T21:43:44",
+      "payment_type": 4,
+      "passenger_count": 3,
+      "trip_distance": 2.86,
+      "total_amount": 2.59
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-05T23:59:32",
+      "payment_type": 2,
+      "passenger_count": 2,
+      "trip_distance": 2.56,
+      "total_amount": 12.2
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-06T05:45:53",
+      "payment_type": 1,
+      "passenger_count": 4,
+      "trip_distance": 0.97,
+      "total_amount": 9.38
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-06T05:52:22",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.49,
+      "total_amount": 13.29
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-06T06:42:40",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 7.25,
+      "total_amount": 25.7
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-06T07:23:27",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 0.81,
+      "total_amount": 6.83
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-06T08:38:20",
+      "payment_type": 4,
+      "passenger_count": 2,
+      "trip_distance": 7.59,
+      "total_amount": 5.26
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-06T09:38:09",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.08,
+      "total_amount": 14.89
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-06T10:27:34",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.68,
+      "total_amount": 14.04
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-06T13:29:23",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 6.9,
+      "total_amount": 24.61
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-06T13:55:46",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 4.52,
+      "total_amount": 16.1
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-06T15:49:09",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 7.29,
+      "total_amount": 26.99
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-06T17:03:45",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.28,
+      "total_amount": 16.01
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-06T17:07:33",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 4.82,
+      "total_amount": 23.47
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-06T17:56:47",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.98,
+      "total_amount": 13.77
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-06T18:06:01",
+      "payment_type": 4,
+      "passenger_count": 1,
+      "trip_distance": 0.8,
+      "total_amount": 1.86
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-06T18:33:08",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 2.08,
+      "total_amount": 12.5
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-06T20:42:04",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.55,
+      "total_amount": 13.22
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-07T01:43:46",
+      "payment_type": 2,
+      "passenger_count": 3,
+      "trip_distance": 14.93,
+      "total_amount": 43.13
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-07T01:47:38",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 0.91,
+      "total_amount": 8.81
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-07T04:23:31",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 21.4,
+      "total_amount": 75.74
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-07T11:08:18",
+      "payment_type": 3,
+      "passenger_count": 1,
+      "trip_distance": 0.74,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-07T12:55:01",
+      "payment_type": 1,
+      "passenger_count": 5,
+      "trip_distance": 2.98,
+      "total_amount": 15.25
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-07T15:52:16",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 8.87,
+      "total_amount": 31.82
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-07T16:35:52",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 0.53,
+      "total_amount": 6.13
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-07T18:19:56",
+      "payment_type": 4,
+      "passenger_count": 1,
+      "trip_distance": 3.77,
+      "total_amount": 3.35
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-07T18:38:59",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.04,
+      "total_amount": 11.56
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-07T18:40:32",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 4.16,
+      "total_amount": 21.53
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-07T19:19:26",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 5.06,
+      "total_amount": 19.83
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-07T22:22:08",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 5.54,
+      "total_amount": 24.24
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-08T01:09:22",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 0.71,
+      "total_amount": 8.26
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-08T04:22:16",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 12.97,
+      "total_amount": 38.23
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-08T08:16:37",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 2.62,
+      "total_amount": 16.2
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-08T08:34:01",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 3.19,
+      "total_amount": 15.28
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-08T08:36:41",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 7.89,
+      "total_amount": 30.52
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-08T12:23:11",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 0.46,
+      "total_amount": 6.47
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-08T16:20:12",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 7.49,
+      "total_amount": 23.53
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-08T17:50:30",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.67,
+      "total_amount": 17.3
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-08T20:13:13",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 7.76,
+      "total_amount": 25.2
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-09T04:43:42",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 0.88,
+      "total_amount": 8.89
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-09T11:09:34",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 0.49,
+      "total_amount": 6.78
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-09T11:10:16",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.13,
+      "total_amount": 8.45
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-09T15:01:42",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.25,
+      "total_amount": 8.61
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-09T16:12:10",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.99,
+      "total_amount": 13.52
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-09T20:54:40",
+      "payment_type": 3,
+      "passenger_count": 1,
+      "trip_distance": 1.96,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-09T21:22:42",
+      "payment_type": 3,
+      "passenger_count": 2,
+      "trip_distance": 0.93,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-10T09:00:00",
+      "payment_type": 1,
+      "passenger_count": 4,
+      "trip_distance": 17.53,
+      "total_amount": 60.81
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-10T10:33:17",
+      "payment_type": 2,
+      "passenger_count": 4,
+      "trip_distance": 0.69,
+      "total_amount": 6.53
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-10T15:27:18",
+      "payment_type": 3,
+      "passenger_count": 5,
+      "trip_distance": 3.69,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-10T17:22:52",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 12.64,
+      "total_amount": 49.08
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-10T20:52:45",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 5.92,
+      "total_amount": 26.03
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-11T00:10:36",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 5.65,
+      "total_amount": 19.93
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-11T00:56:46",
+      "payment_type": 2,
+      "passenger_count": 2,
+      "trip_distance": 16.11,
+      "total_amount": 46.08
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-11T01:05:04",
+      "payment_type": 4,
+      "passenger_count": 2,
+      "trip_distance": 0.97,
+      "total_amount": 1.65
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-11T03:20:18",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 17.51,
+      "total_amount": 49.58
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-11T03:30:03",
+      "payment_type": 3,
+      "passenger_count": 1,
+      "trip_distance": 10.8,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-11T04:18:13",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.99,
+      "total_amount": 15.75
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-11T06:24:23",
+      "payment_type": 4,
+      "passenger_count": 1,
+      "trip_distance": 0.41,
+      "total_amount": 1.17
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-11T08:33:34",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2,
+      "total_amount": 14.92
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-11T09:59:37",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 3.64,
+      "total_amount": 16.4
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-11T11:01:04",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.54,
+      "total_amount": 9.95
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-11T12:54:51",
+      "payment_type": 1,
+      "passenger_count": 6,
+      "trip_distance": 0.95,
+      "total_amount": 7.93
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-11T13:45:11",
+      "payment_type": 1,
+      "passenger_count": 3,
+      "trip_distance": 0.73,
+      "total_amount": 7.64
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-11T15:49:02",
+      "payment_type": 4,
+      "passenger_count": 4,
+      "trip_distance": 0.62,
+      "total_amount": 1.27
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-11T18:20:05",
+      "payment_type": 2,
+      "passenger_count": 4,
+      "trip_distance": 1.77,
+      "total_amount": 11.73
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-11T20:33:22",
+      "payment_type": 2,
+      "passenger_count": 3,
+      "trip_distance": 2.48,
+      "total_amount": 12
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-11T21:50:15",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.53,
+      "total_amount": 10.51
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-11T23:22:19",
+      "payment_type": 3,
+      "passenger_count": 1,
+      "trip_distance": 7.44,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-12T01:05:07",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 5.01,
+      "total_amount": 18.33
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-12T04:00:32",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 1.56,
+      "total_amount": 9.7
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-12T05:59:24",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 6.13,
+      "total_amount": 24.92
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-12T06:48:19",
+      "payment_type": 3,
+      "passenger_count": 1,
+      "trip_distance": 18.84,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-12T07:18:14",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 5.04,
+      "total_amount": 19.94
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-12T07:37:19",
+      "payment_type": 2,
+      "passenger_count": 3,
+      "trip_distance": 12.63,
+      "total_amount": 36.38
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-12T08:41:04",
+      "payment_type": 1,
+      "passenger_count": 3,
+      "trip_distance": 2.56,
+      "total_amount": 17.02
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-12T14:44:32",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.55,
+      "total_amount": 12.56
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-12T17:38:24",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.38,
+      "total_amount": 15.04
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-12T18:32:36",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 1.37,
+      "total_amount": 10.73
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-12T19:09:25",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 1.01,
+      "total_amount": 7.33
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-12T20:03:23",
+      "payment_type": 2,
+      "passenger_count": 2,
+      "trip_distance": 0.61,
+      "total_amount": 7.33
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-12T20:33:14",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.71,
+      "total_amount": 12.2
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-13T00:03:33",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 5.48,
+      "total_amount": 22.95
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-13T00:16:38",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.12,
+      "total_amount": 10.44
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-13T03:51:59",
+      "payment_type": 1,
+      "passenger_count": 4,
+      "trip_distance": 2.83,
+      "total_amount": 14.69
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-13T07:44:18",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 1.48,
+      "total_amount": 8.5
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-13T09:22:39",
+      "payment_type": 3,
+      "passenger_count": 2,
+      "trip_distance": 6.85,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-13T12:09:28",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.73,
+      "total_amount": 10.99
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-13T16:17:23",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 2,
+      "total_amount": 11.57
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-13T17:23:22",
+      "payment_type": 2,
+      "passenger_count": 6,
+      "trip_distance": 2.3,
+      "total_amount": 13.05
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-13T20:41:11",
+      "payment_type": 3,
+      "passenger_count": 2,
+      "trip_distance": 1.84,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-13T22:01:37",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 2.31,
+      "total_amount": 11.58
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-14T00:41:51",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.08,
+      "total_amount": 10.01
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-14T03:43:27",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 1.94,
+      "total_amount": 12
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-14T03:52:26",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 2.98,
+      "total_amount": 16.48
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-14T04:33:26",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 8.64,
+      "total_amount": 27.4
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-14T08:29:29",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 1.08,
+      "total_amount": 10
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-14T08:49:01",
+      "payment_type": 3,
+      "passenger_count": 1,
+      "trip_distance": 2.89,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-14T14:25:09",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.78,
+      "total_amount": 13
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-14T19:31:21",
+      "payment_type": 1,
+      "passenger_count": 3,
+      "trip_distance": 0.9,
+      "total_amount": 8.51
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-14T19:32:49",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 5.1,
+      "total_amount": 19.94
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-15T03:20:28",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 7.61,
+      "total_amount": 30.21
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-15T04:33:02",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 0.62,
+      "total_amount": 8.61
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-15T04:42:04",
+      "payment_type": 3,
+      "passenger_count": 1,
+      "trip_distance": 1.02,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-15T04:42:48",
+      "payment_type": 1,
+      "passenger_count": 3,
+      "trip_distance": 5.37,
+      "total_amount": 23.2
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-15T10:36:18",
+      "payment_type": 4,
+      "passenger_count": 1,
+      "trip_distance": 2.45,
+      "total_amount": 2.19
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-15T13:21:38",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 5.99,
+      "total_amount": 23
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-15T13:32:04",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 5.07,
+      "total_amount": 21.64
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-15T14:21:17",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 1.11,
+      "total_amount": 8.47
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-15T17:24:36",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.26,
+      "total_amount": 15.22
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-15T23:18:21",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 1.7,
+      "total_amount": 11.59
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-16T02:46:35",
+      "payment_type": 1,
+      "passenger_count": 3,
+      "trip_distance": 3.92,
+      "total_amount": 17.67
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-16T03:24:55",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.56,
+      "total_amount": 10.78
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-16T09:16:14",
+      "payment_type": 2,
+      "passenger_count": 2,
+      "trip_distance": 1.85,
+      "total_amount": 11.93
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-16T09:29:35",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 2.11,
+      "total_amount": 14.68
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-16T09:30:48",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 18.4,
+      "total_amount": 64.9
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-16T09:35:22",
+      "payment_type": 2,
+      "passenger_count": 2,
+      "trip_distance": 5.53,
+      "total_amount": 21.13
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-16T17:57:01",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 2.62,
+      "total_amount": 13.85
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-16T22:28:42",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 1.24,
+      "total_amount": 8.9
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-17T01:39:47",
+      "payment_type": 1,
+      "passenger_count": 6,
+      "trip_distance": 1.61,
+      "total_amount": 10.93
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-17T08:05:51",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 4.31,
+      "total_amount": 21.35
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-17T08:55:40",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 11.5,
+      "total_amount": 40.17
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-17T09:33:20",
+      "payment_type": 3,
+      "passenger_count": 1,
+      "trip_distance": 5.68,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-17T15:05:06",
+      "payment_type": 1,
+      "passenger_count": 3,
+      "trip_distance": 0.75,
+      "total_amount": 7.62
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-17T17:38:21",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 0.51,
+      "total_amount": 8.58
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-17T18:50:44",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 20.64,
+      "total_amount": 58.9
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-17T20:01:31",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 21.68,
+      "total_amount": 60
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-17T20:28:46",
+      "payment_type": 3,
+      "passenger_count": 1,
+      "trip_distance": 1.53,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-17T20:59:29",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.71,
+      "total_amount": 14.47
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-17T22:18:05",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 4.61,
+      "total_amount": 18.94
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-17T23:16:13",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 1.98,
+      "total_amount": 10.75
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-18T01:12:25",
+      "payment_type": 2,
+      "passenger_count": 2,
+      "trip_distance": 21.99,
+      "total_amount": 60.77
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-18T05:18:55",
+      "payment_type": 2,
+      "passenger_count": 2,
+      "trip_distance": 1.66,
+      "total_amount": 9.95
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-18T08:12:25",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 3.17,
+      "total_amount": 17.1
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-18T09:56:04",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 10.8,
+      "total_amount": 38.34
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-18T15:58:33",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 0.66,
+      "total_amount": 6.45
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-18T16:33:10",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.8,
+      "total_amount": 13.12
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-18T17:21:45",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 0.57,
+      "total_amount": 10.2
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-18T22:43:34",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.73,
+      "total_amount": 15.01
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-19T00:58:17",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 15.4,
+      "total_amount": 49.81
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-19T10:16:32",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 7.54,
+      "total_amount": 29.42
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-19T11:27:34",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 21.94,
+      "total_amount": 75.68
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-19T11:43:17",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.05,
+      "total_amount": 9.08
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-19T12:35:40",
+      "payment_type": 1,
+      "passenger_count": 4,
+      "trip_distance": 1.83,
+      "total_amount": 11.21
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-19T13:34:43",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.3,
+      "total_amount": 11.85
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-19T17:35:23",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 6.6,
+      "total_amount": 23.8
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-19T18:26:54",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 2.95,
+      "total_amount": 14.68
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-19T18:31:19",
+      "payment_type": 2,
+      "passenger_count": 2,
+      "trip_distance": 5.71,
+      "total_amount": 21.58
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-19T19:39:59",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.39,
+      "total_amount": 13.28
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-20T07:18:52",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 8.62,
+      "total_amount": 26.35
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-20T07:29:10",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 0.85,
+      "total_amount": 7.92
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-20T08:07:31",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.4,
+      "total_amount": 15.39
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-20T08:16:41",
+      "payment_type": 4,
+      "passenger_count": 1,
+      "trip_distance": 1.12,
+      "total_amount": 2.02
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-20T08:24:14",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 17.26,
+      "total_amount": 50.45
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-20T17:23:12",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.71,
+      "total_amount": 15.43
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-20T18:31:52",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.12,
+      "total_amount": 13.96
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-20T18:33:18",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 2.6,
+      "total_amount": 17.4
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-20T21:27:39",
+      "payment_type": 4,
+      "passenger_count": 1,
+      "trip_distance": 3.93,
+      "total_amount": 3.13
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-21T00:46:38",
+      "payment_type": 2,
+      "passenger_count": 2,
+      "trip_distance": 2.28,
+      "total_amount": 11.5
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-21T03:54:18",
+      "payment_type": 2,
+      "passenger_count": 5,
+      "trip_distance": 6.72,
+      "total_amount": 22.6
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-21T03:59:51",
+      "payment_type": 2,
+      "passenger_count": 3,
+      "trip_distance": 0.97,
+      "total_amount": 8.23
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-21T10:29:31",
+      "payment_type": 1,
+      "passenger_count": 5,
+      "trip_distance": 1.07,
+      "total_amount": 8.35
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-21T10:37:52",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.82,
+      "total_amount": 11.54
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-21T13:16:39",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 0.77,
+      "total_amount": 7.49
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-21T18:01:32",
+      "payment_type": 2,
+      "passenger_count": 2,
+      "trip_distance": 17.91,
+      "total_amount": 52.08
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-21T18:45:56",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 6.66,
+      "total_amount": 27.23
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-21T19:47:24",
+      "payment_type": 3,
+      "passenger_count": 1,
+      "trip_distance": 7.08,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-21T20:20:31",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 6.37,
+      "total_amount": 21.73
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-21T20:37:08",
+      "payment_type": 2,
+      "passenger_count": 2,
+      "trip_distance": 1.2,
+      "total_amount": 8.8
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-22T00:40:17",
+      "payment_type": 3,
+      "passenger_count": 1,
+      "trip_distance": 1.52,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-22T02:17:02",
+      "payment_type": 3,
+      "passenger_count": 1,
+      "trip_distance": 3.55,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-22T10:56:16",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 2.87,
+      "total_amount": 11.98
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-22T13:17:52",
+      "payment_type": 2,
+      "passenger_count": 2,
+      "trip_distance": 2.59,
+      "total_amount": 11.28
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-22T16:29:41",
+      "payment_type": 4,
+      "passenger_count": 2,
+      "trip_distance": 3.1,
+      "total_amount": 2.51
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-22T17:02:13",
+      "payment_type": 3,
+      "passenger_count": 2,
+      "trip_distance": 2.35,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-22T17:04:36",
+      "payment_type": 1,
+      "passenger_count": 4,
+      "trip_distance": 10.09,
+      "total_amount": 38.29
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-22T17:26:32",
+      "payment_type": 1,
+      "passenger_count": 3,
+      "trip_distance": 4.47,
+      "total_amount": 21.19
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-22T18:48:15",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 0.48,
+      "total_amount": 9.74
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-22T19:05:56",
+      "payment_type": 2,
+      "passenger_count": 3,
+      "trip_distance": 2.09,
+      "total_amount": 10.03
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-22T19:10:38",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 0.48,
+      "total_amount": 6.61
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-22T19:34:51",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.76,
+      "total_amount": 10.93
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-22T19:43:00",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 8.42,
+      "total_amount": 31.9
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-22T20:20:03",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 5.83,
+      "total_amount": 20.38
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-22T23:07:48",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.93,
+      "total_amount": 15.01
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-22T23:31:56",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 2.76,
+      "total_amount": 15.76
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-22T23:57:56",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 0.72,
+      "total_amount": 9.19
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-23T01:46:12",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 7.13,
+      "total_amount": 27.15
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-23T01:59:45",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 0.94,
+      "total_amount": 9
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-23T03:59:31",
+      "payment_type": 3,
+      "passenger_count": 1,
+      "trip_distance": 2.35,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-23T04:46:03",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.07,
+      "total_amount": 9.27
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-23T05:50:43",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 5.38,
+      "total_amount": 23.8
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-23T09:10:46",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.44,
+      "total_amount": 13.35
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-23T09:19:14",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 12.45,
+      "total_amount": 48.83
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-23T09:21:14",
+      "payment_type": 2,
+      "passenger_count": 2,
+      "trip_distance": 21.89,
+      "total_amount": 62.03
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-23T10:15:30",
+      "payment_type": 3,
+      "passenger_count": 3,
+      "trip_distance": 0.78,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-23T11:27:31",
+      "payment_type": 1,
+      "passenger_count": 3,
+      "trip_distance": 2.34,
+      "total_amount": 11.57
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-23T12:04:37",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.26,
+      "total_amount": 9.6
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-23T17:32:52",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.88,
+      "total_amount": 17.58
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-23T17:40:56",
+      "payment_type": 3,
+      "passenger_count": 1,
+      "trip_distance": 4.13,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-23T23:57:40",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 3.61,
+      "total_amount": 16.49
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-24T00:26:08",
+      "payment_type": 2,
+      "passenger_count": 6,
+      "trip_distance": 1.88,
+      "total_amount": 10.5
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-24T00:28:08",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 4.35,
+      "total_amount": 16.68
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-24T05:23:56",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 7.59,
+      "total_amount": 27.36
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-24T07:15:48",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 6.68,
+      "total_amount": 21.5
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-24T08:48:46",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 3.94,
+      "total_amount": 18.8
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-24T10:49:36",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 3.31,
+      "total_amount": 15.56
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-24T12:33:41",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 0.54,
+      "total_amount": 6.15
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-24T18:36:52",
+      "payment_type": 2,
+      "passenger_count": 3,
+      "trip_distance": 1.85,
+      "total_amount": 11.93
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-24T19:54:03",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 2.19,
+      "total_amount": 10.28
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-25T02:26:22",
+      "payment_type": 2,
+      "passenger_count": 2,
+      "trip_distance": 12.03,
+      "total_amount": 35.88
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-25T08:37:29",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 1.8,
+      "total_amount": 14.32
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-25T09:28:08",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 2.7,
+      "total_amount": 14.05
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-25T19:11:14",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.08,
+      "total_amount": 11.23
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-26T00:20:25",
+      "payment_type": 2,
+      "passenger_count": 2,
+      "trip_distance": 0.79,
+      "total_amount": 7.78
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-26T05:58:47",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 2.15,
+      "total_amount": 11.18
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-26T13:38:00",
+      "payment_type": 1,
+      "passenger_count": 6,
+      "trip_distance": 2.74,
+      "total_amount": 13.97
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-26T18:00:15",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.9,
+      "total_amount": 13.5
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-26T18:15:15",
+      "payment_type": 3,
+      "passenger_count": 1,
+      "trip_distance": 1.24,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-26T18:38:44",
+      "payment_type": 1,
+      "passenger_count": 3,
+      "trip_distance": 7.26,
+      "total_amount": 29.68
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-26T19:26:37",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 7.55,
+      "total_amount": 27.46
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-27T00:45:32",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 2.57,
+      "total_amount": 12.23
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-27T02:03:11",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.04,
+      "total_amount": 10.17
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-27T03:30:51",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.87,
+      "total_amount": 11.5
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-27T05:45:31",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.65,
+      "total_amount": 14.04
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-27T06:14:42",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.1,
+      "total_amount": 12.4
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-27T14:09:41",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 0.72,
+      "total_amount": 7.21
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-27T14:31:24",
+      "payment_type": 2,
+      "passenger_count": 5,
+      "trip_distance": 0.45,
+      "total_amount": 5.93
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-27T15:11:39",
+      "payment_type": 3,
+      "passenger_count": 1,
+      "trip_distance": 2.71,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-27T16:47:09",
+      "payment_type": 3,
+      "passenger_count": 1,
+      "trip_distance": 1.55,
+      "total_amount": 0
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-27T16:49:34",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 1.72,
+      "total_amount": 9.1
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-27T18:32:41",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 3.99,
+      "total_amount": 18.85
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-27T18:32:48",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 4.6,
+      "total_amount": 22.54
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-27T18:49:11",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 17.06,
+      "total_amount": 55.49
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-28T02:23:48",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.05,
+      "total_amount": 9.72
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-28T02:32:51",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.81,
+      "total_amount": 11.75
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-28T03:06:52",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.24,
+      "total_amount": 13.69
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-28T04:08:59",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 3.26,
+      "total_amount": 17.58
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-28T08:43:52",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 5.59,
+      "total_amount": 21.28
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-28T08:53:00",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.52,
+      "total_amount": 13.71
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-28T09:21:58",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 4.65,
+      "total_amount": 21.02
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-28T09:29:37",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.77,
+      "total_amount": 16.84
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-28T09:34:00",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.7,
+      "total_amount": 16.79
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-28T09:34:02",
+      "payment_type": 4,
+      "passenger_count": 1,
+      "trip_distance": 0.48,
+      "total_amount": 1.7
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-28T09:39:11",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 21.74,
+      "total_amount": 74.28
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-28T20:41:54",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 4.61,
+      "total_amount": 20.33
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-29T00:50:42",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 6.34,
+      "total_amount": 21.65
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-29T05:01:28",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 2.1,
+      "total_amount": 12.63
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-29T06:32:59",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.29,
+      "total_amount": 12.95
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-29T10:00:37",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.92,
+      "total_amount": 10.82
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-29T13:04:15",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 1.14,
+      "total_amount": 7.65
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-29T13:44:26",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.47,
+      "total_amount": 9.6
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-29T14:59:47",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.06,
+      "total_amount": 11.46
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-29T18:56:36",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.73,
+      "total_amount": 12.88
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-29T20:36:23",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 1,
+      "total_amount": 8.3
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-29T22:08:10",
+      "payment_type": 4,
+      "passenger_count": 1,
+      "trip_distance": 0.77,
+      "total_amount": 1.55
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-29T22:51:15",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 2.56,
+      "total_amount": 12.2
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-30T00:25:19",
+      "payment_type": 1,
+      "passenger_count": 5,
+      "trip_distance": 1.63,
+      "total_amount": 10.89
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-30T06:35:35",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 1.86,
+      "total_amount": 11.1
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-30T06:59:16",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.74,
+      "total_amount": 11.31
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-30T09:23:12",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 6.09,
+      "total_amount": 22.53
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-30T10:57:36",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 0.59,
+      "total_amount": 7.04
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-30T12:12:24",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 6.48,
+      "total_amount": 21
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-30T17:12:08",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 2.21,
+      "total_amount": 12.83
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-30T17:44:25",
+      "payment_type": 2,
+      "passenger_count": 2,
+      "trip_distance": 1.13,
+      "total_amount": 10.13
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-30T18:18:04",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.33,
+      "total_amount": 15.68
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-30T19:53:15",
+      "payment_type": 4,
+      "passenger_count": 1,
+      "trip_distance": 2.96,
+      "total_amount": 2.44
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-30T20:45:56",
+      "payment_type": 1,
+      "passenger_count": 6,
+      "trip_distance": 3.29,
+      "total_amount": 16.47
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-31T04:08:59",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 19.99,
+      "total_amount": 69.37
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-31T05:07:50",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.02,
+      "total_amount": 12.01
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-31T06:26:56",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.86,
+      "total_amount": 10.28
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-31T06:39:46",
+      "payment_type": 1,
+      "passenger_count": 4,
+      "trip_distance": 5.04,
+      "total_amount": 21.96
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-31T08:26:30",
+      "payment_type": 2,
+      "passenger_count": 2,
+      "trip_distance": 4.92,
+      "total_amount": 19.6
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-31T08:35:57",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 5.16,
+      "total_amount": 24.94
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-31T09:17:55",
+      "payment_type": 1,
+      "passenger_count": 2,
+      "trip_distance": 6.58,
+      "total_amount": 30.01
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-31T09:29:40",
+      "payment_type": 4,
+      "passenger_count": 1,
+      "trip_distance": 1.69,
+      "total_amount": 2.31
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-31T10:05:59",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 19.75,
+      "total_amount": 68.16
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-31T14:19:08",
+      "payment_type": 4,
+      "passenger_count": 2,
+      "trip_distance": 15.11,
+      "total_amount": 8.51
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-31T17:33:04",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.7,
+      "total_amount": 13.27
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-31T17:54:45",
+      "payment_type": 2,
+      "passenger_count": 1,
+      "trip_distance": 7,
+      "total_amount": 24.8
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-31T19:22:42",
+      "payment_type": 2,
+      "passenger_count": 4,
+      "trip_distance": 16.47,
+      "total_amount": 45.97
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-31T22:37:51",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 1.48,
+      "total_amount": 10.83
+    },
+    {
+      "tpep_pickup_datetime": "2024-01-31T23:39:39",
+      "payment_type": 1,
+      "passenger_count": 1,
+      "trip_distance": 2.77,
+      "total_amount": 13.99
+    }
+  ]
+}
