@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 250" role="img"
+     aria-label="Catálogo de Analítica Geoespacial: lista de mapas etiquetados por la sigla de la unidad, con buscador por palabra clave y filtro por unidad">
+  <defs>
+    <style>
+      .cm-cap { font: 700 13px Montserrat, system-ui, sans-serif; fill: #002b49; }
+      .cm-t   { font: 700 11px Montserrat, system-ui, sans-serif; fill: #16212e; }
+      .cm-s   { font: 400 10px Montserrat, system-ui, sans-serif; fill: #44546a; }
+      .cm-tag { font: 700 9px Montserrat, system-ui, sans-serif; fill: #ffffff; }
+      .cm-ph  { font: 400 11px Montserrat, system-ui, sans-serif; fill: #8a93a0; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="640" height="250" rx="14" fill="#f2f0eb"/>
+  <text x="24" y="34" class="cm-cap">Catálogo de mapas</text>
+
+  <!-- Buscador + filtro -->
+  <rect x="24" y="46" width="380" height="30" rx="8" fill="#ffffff" stroke="#c4ccd6"/>
+  <circle cx="42" cy="61" r="6" fill="none" stroke="#0a7b86" stroke-width="2"/>
+  <line x1="46" y1="65" x2="51" y2="70" stroke="#0a7b86" stroke-width="2"/>
+  <text x="58" y="65" class="cm-ph">Buscar por palabra clave…</text>
+  <rect x="414" y="46" width="202" height="30" rx="8" fill="#ffffff" stroke="#c4ccd6"/>
+  <text x="426" y="65" class="cm-ph">Filtrar por unidad ▾</text>
+
+  <!-- Tarjetas de mapas -->
+  <g transform="translate(24,92)">
+    <rect width="186" height="68" rx="10" fill="#ffffff" stroke="#d9e0e8"/>
+    <rect x="12" y="12" width="46" height="18" rx="9" fill="#0a7b86"/>
+    <text x="20" y="25" class="cm-tag">SIEDCO</text>
+    <text x="12" y="48" class="cm-t">Análisis de seguridad</text>
+    <text x="12" y="62" class="cm-s">Mapa histórico</text>
+  </g>
+  <g transform="translate(226,92)">
+    <rect width="186" height="68" rx="10" fill="#ffffff" stroke="#d9e0e8"/>
+    <rect x="12" y="12" width="46" height="18" rx="9" fill="#6b4bb0"/>
+    <text x="20" y="25" class="cm-tag">RNMC</text>
+    <text x="12" y="48" class="cm-t">Llamadas y delitos</text>
+    <text x="12" y="62" class="cm-s">Mapa histórico</text>
+  </g>
+  <g transform="translate(428,92)">
+    <rect width="186" height="68" rx="10" fill="#ffffff" stroke="#d9e0e8"/>
+    <rect x="12" y="12" width="46" height="18" rx="9" fill="#1b63b0"/>
+    <text x="20" y="25" class="cm-tag">SECAD</text>
+    <text x="12" y="48" class="cm-t">Actividad delictiva</text>
+    <text x="12" y="62" class="cm-s">Mapa histórico</text>
+  </g>
+  <g transform="translate(24,172)">
+    <rect width="186" height="60" rx="10" fill="#eef2f6" stroke="#9aa3ad" stroke-dasharray="4 3"/>
+    <text x="12" y="30" class="cm-t">+ Nuevo mapa</text>
+    <text x="12" y="46" class="cm-s">cargar datos propios</text>
+  </g>
+  <g transform="translate(226,172)">
+    <rect width="388" height="60" rx="10" fill="#d6f7f7"/>
+    <text x="14" y="28" class="cm-t">Anticipación a Fenómenos de Seguridad</text>
+    <text x="14" y="46" class="cm-s">capas: cuadrantes, patrullas, predicciones, hechos reales…</text>
+  </g>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 210" role="img"
+     aria-label="Formatos de datos admitidos para graficar en el mapa: JSON, GeoJSON, CSV y XLS; cada registro debe tener latitud y longitud para ubicarse en el mapa">
+  <defs>
+    <style>
+      .fo-cap { font: 700 13px Montserrat, system-ui, sans-serif; fill: #002b49; }
+      .fo-t   { font: 700 12px Montserrat, system-ui, sans-serif; fill: #ffffff; }
+      .fo-s   { font: 400 10px Montserrat, system-ui, sans-serif; fill: #44546a; }
+      .fo-req { font: 700 11px Montserrat, system-ui, sans-serif; fill: #0a7b86; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="640" height="210" rx="14" fill="#f2f0eb"/>
+  <text x="24" y="34" class="fo-cap">Formatos admitidos</text>
+
+  <g transform="translate(24,52)">
+    <rect width="130" height="54" rx="10" fill="#1b63b0"/>
+    <text x="16" y="34" class="fo-t">JSON</text>
+  </g>
+  <g transform="translate(166,52)">
+    <rect width="130" height="54" rx="10" fill="#6b4bb0"/>
+    <text x="16" y="34" class="fo-t">GeoJSON</text>
+  </g>
+  <g transform="translate(308,52)">
+    <rect width="130" height="54" rx="10" fill="#1b8f4d"/>
+    <text x="16" y="34" class="fo-t">CSV</text>
+  </g>
+  <g transform="translate(450,52)">
+    <rect width="130" height="54" rx="10" fill="#e8830c"/>
+    <text x="16" y="34" class="fo-t">XLS</text>
+  </g>
+
+  <rect x="24" y="124" width="592" height="62" rx="10" fill="#d6f7f7"/>
+  <text x="40" y="150" class="fo-req">Requisito: cada registro necesita latitud y longitud</text>
+  <text x="40" y="170" class="fo-s">Arrastra los archivos o usa “Browse your files”. Con “Add Data” se suman más fuentes; cada dataset genera capas configurables.</text>
+</svg>

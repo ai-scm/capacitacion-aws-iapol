@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 230" role="img"
+     aria-label="Compartir un dashboard concede acceso a usuarios, grupos o roles; el acceso depende también del acceso al dataset del que proviene, y ser lector no habilita publicar ni compartir">
+  <defs>
+    <marker id="cp-tip" viewBox="0 0 10 10" refX="7.5" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0a7b86"/>
+    </marker>
+    <style>
+      .cp-cap { font: 700 12px Montserrat, system-ui, sans-serif; fill: #002b49; }
+      .cp-tx  { font: 400 10px Montserrat, system-ui, sans-serif; fill: #44546a; }
+      .cp-tag { font: 700 10px Montserrat, system-ui, sans-serif; fill: #ffffff; }
+      .ic { fill:#fff; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="640" height="230" rx="14" fill="#f2f0eb"/>
+
+  <!-- Dashboard -->
+  <g transform="translate(40,80)">
+    <rect width="150" height="72" rx="12" fill="#ffffff" stroke="#0a7b86" stroke-width="2"/>
+    <rect x="14" y="16" width="36" height="36" rx="8" fill="#0a7b86"/>
+    <g transform="translate(23,26)"><rect x="0" y="8" width="4" height="8" rx="1" class="ic"/><rect x="6" y="4" width="4" height="12" rx="1" class="ic"/><rect x="12" y="1" width="4" height="15" rx="1" class="ic"/></g>
+    <text x="58" y="34" class="cp-cap">Dashboard</text>
+    <text x="58" y="50" class="cp-tx">publicado</text>
+  </g>
+
+  <!-- Dataset dependencia -->
+  <g transform="translate(40,20)">
+    <rect width="150" height="44" rx="10" fill="#eef2f6" stroke="#9aa3ad"/>
+    <text x="14" y="20" class="cp-cap">Dataset</text>
+    <text x="14" y="36" class="cp-tx">el dashboard depende de él</text>
+  </g>
+  <path d="M115 64 L 115 80" stroke="#9aa3ad" stroke-width="2.5" stroke-dasharray="4 3" marker-end="url(#cp-tip)"/>
+
+  <!-- compartir -->
+  <path d="M190 116 L 240 116" stroke="#0a7b86" stroke-width="2.5" marker-end="url(#cp-tip)"/>
+  <text x="196" y="106" class="cp-tx" fill="#0a7b86" font-weight="700">compartir</text>
+
+  <!-- destinatarios -->
+  <g transform="translate(248,36)">
+    <rect width="150" height="44" rx="10" fill="#ffffff" stroke="#1b63b0"/>
+    <text x="14" y="20" class="cp-cap">Usuario</text>
+    <text x="14" y="36" class="cp-tx">lee si tiene permiso</text>
+  </g>
+  <g transform="translate(248,92)">
+    <rect width="150" height="44" rx="10" fill="#ffffff" stroke="#1b63b0"/>
+    <text x="14" y="20" class="cp-cap">Grupo</text>
+    <text x="14" y="36" class="cp-tx">acceso por pertenencia</text>
+  </g>
+  <g transform="translate(248,148)">
+    <rect width="150" height="44" rx="10" fill="#ffffff" stroke="#1b63b0"/>
+    <text x="14" y="20" class="cp-cap">Rol</text>
+    <text x="14" y="36" class="cp-tx">acceso por función</text>
+  </g>
+
+  <!-- nota lector -->
+  <g transform="translate(424,60)">
+    <rect width="192" height="108" rx="12" fill="#fff4e0" stroke="#f0c879"/>
+    <text x="14" y="28" class="cp-cap" fill="#8a5300">Lector ≠ Autor</text>
+    <text x="14" y="52" class="cp-tx" fill="#8a5300">Ser lector permite ver,</text>
+    <text x="14" y="68" class="cp-tx" fill="#8a5300">pero NO publicar ni</text>
+    <text x="14" y="84" class="cp-tx" fill="#8a5300">compartir recursos.</text>
+  </g>
+</svg>

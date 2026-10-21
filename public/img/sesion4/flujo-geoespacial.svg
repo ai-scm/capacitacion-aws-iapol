@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 230" role="img"
+     aria-label="Flujo de la Analítica Geoespacial en IAPOL: se cargan datos con latitud y longitud (JSON, GeoJSON, CSV o XLS), se configuran capas de visualización, se aplican filtros y se guarda o exporta el mapa en el catálogo">
+  <defs>
+    <linearGradient id="ge-arr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#002b49"/>
+      <stop offset="100%" stop-color="#0a7b86"/>
+    </linearGradient>
+    <marker id="ge-tip" viewBox="0 0 10 10" refX="7.5" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0a7b86"/>
+    </marker>
+    <style>
+      .ge-name { font: 700 12px Montserrat, system-ui, sans-serif; fill: #ffffff; }
+      .ge-role { font: 400 10px Montserrat, system-ui, sans-serif; fill: #16212e; }
+      .ge-step { font: 700 10px Montserrat, system-ui, sans-serif; fill: #0a7b86; }
+      .ic { fill:#fff; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="820" height="230" rx="16" fill="#f2f0eb"/>
+  <text x="24" y="34" class="ge-step" font-size="13">Analítica Geoespacial · flujo de trabajo</text>
+
+  <!-- 1 Datos -->
+  <g transform="translate(24,60)">
+    <rect width="150" height="120" rx="12" fill="#1b63b0"/>
+    <text x="14" y="26" class="ge-name">1 · Cargar datos</text>
+    <g transform="translate(14,40)">
+      <rect x="0" y="0" width="30" height="20" rx="3" fill="#ffffff" opacity="0.9"/>
+      <rect x="36" y="0" width="30" height="20" rx="3" fill="#ffffff" opacity="0.7"/>
+    </g>
+    <text x="14" y="86" class="ge-role" fill="#dce9f6">lat + lon requeridas</text>
+    <text x="14" y="102" class="ge-role" fill="#dce9f6">JSON · GeoJSON</text>
+    <text x="14" y="114" class="ge-role" fill="#dce9f6">CSV · XLS</text>
+  </g>
+  <line x1="178" y1="120" x2="208" y2="120" stroke="url(#ge-arr)" stroke-width="3.5" marker-end="url(#ge-tip)"/>
+
+  <!-- 2 Capas -->
+  <g transform="translate(212,60)">
+    <rect width="150" height="120" rx="12" fill="#6b4bb0"/>
+    <text x="14" y="26" class="ge-name">2 · Capas</text>
+    <g transform="translate(14,38)">
+      <polygon points="0,10 22,0 44,10 22,20" fill="#ffffff" opacity="0.9"/>
+      <polygon points="0,20 22,10 44,20 22,30" fill="#ffffff" opacity="0.6"/>
+    </g>
+    <text x="14" y="98" class="ge-role" fill="#e7ddf7">puntos, líneas, arcos,</text>
+    <text x="14" y="112" class="ge-role" fill="#e7ddf7">hexágonos, calor…</text>
+  </g>
+  <line x1="366" y1="120" x2="396" y2="120" stroke="url(#ge-arr)" stroke-width="3.5" marker-end="url(#ge-tip)"/>
+
+  <!-- 3 Filtros -->
+  <g transform="translate(400,60)">
+    <rect width="150" height="120" rx="12" fill="#0a7b86"/>
+    <text x="14" y="26" class="ge-name">3 · Filtros</text>
+    <g transform="translate(14,40)">
+      <polygon points="0,0 34,0 21,14 13,14" fill="#ffffff" opacity="0.9"/>
+      <rect x="13" y="14" width="8" height="10" fill="#ffffff" opacity="0.9"/>
+    </g>
+    <text x="14" y="98" class="ge-role" fill="#d6f7f7">por campo, base,</text>
+    <text x="14" y="112" class="ge-role" fill="#d6f7f7">línea de tiempo</text>
+  </g>
+  <line x1="554" y1="120" x2="584" y2="120" stroke="url(#ge-arr)" stroke-width="3.5" marker-end="url(#ge-tip)"/>
+
+  <!-- 4 Guardar / exportar -->
+  <g transform="translate(588,60)">
+    <rect width="208" height="120" rx="12" fill="#002b49"/>
+    <text x="14" y="26" class="ge-name">4 · Guardar / exportar</text>
+    <g transform="translate(14,40)">
+      <path d="M0 2a2 2 0 0 1 2-2h14l6 6v14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2Z" class="ic" opacity="0.9"/>
+    </g>
+    <text x="14" y="90" class="ge-role" fill="#cfe8ee">imagen o configuración</text>
+    <text x="14" y="106" class="ge-role" fill="#cfe8ee">guardar en el catálogo</text>
+  </g>
+</svg>

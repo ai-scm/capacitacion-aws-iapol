@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 250" role="img"
+     aria-label="Filtros dinámicos sobre el mapa: al elegir un campo se filtra en tiempo real; si el campo es de fecha aparece una línea de tiempo con controles de reproducción y selección de rango">
+  <defs>
+    <style>
+      .ft-cap { font: 700 13px Montserrat, system-ui, sans-serif; fill: #002b49; }
+      .ft-t   { font: 700 11px Montserrat, system-ui, sans-serif; fill: #16212e; }
+      .ft-s   { font: 400 10px Montserrat, system-ui, sans-serif; fill: #44546a; }
+      .ft-pill{ font: 700 9px Montserrat, system-ui, sans-serif; fill: #0a5c13; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="640" height="250" rx="14" fill="#f2f0eb"/>
+  <text x="24" y="34" class="ft-cap">Filtros dinámicos y línea de tiempo</text>
+
+  <!-- Panel de filtros -->
+  <g transform="translate(24,52)">
+    <rect width="230" height="170" rx="10" fill="#ffffff" stroke="#d9e0e8"/>
+    <text x="14" y="26" class="ft-t">Filtros</text>
+    <rect x="14" y="38" width="202" height="30" rx="6" fill="#eef2f6"/>
+    <text x="24" y="58" class="ft-s">campo: delito ▾</text>
+    <rect x="14" y="76" width="202" height="30" rx="6" fill="#eef2f6"/>
+    <text x="24" y="96" class="ft-s">valor: violencia intrafamiliar</text>
+    <rect x="14" y="114" width="202" height="30" rx="6" fill="#eef2f6"/>
+    <text x="24" y="134" class="ft-s">campo: fecha_hora</text>
+    <rect x="178" y="119" width="34" height="20" rx="10" fill="#d6f7dd"/>
+    <text x="185" y="133" class="ft-pill">time</text>
+    <text x="14" y="162" class="ft-s">se refleja en el mapa al instante</text>
+  </g>
+
+  <!-- Mapa con puntos filtrados -->
+  <g transform="translate(270,52)">
+    <rect width="190" height="120" rx="10" fill="#dfe7ee" stroke="#c4ccd6"/>
+    <path d="M20 90 Q 60 40 110 60 T 170 40" fill="none" stroke="#b7c2cd" stroke-width="2"/>
+    <circle cx="60" cy="56" r="5" fill="#0a7b86"/>
+    <circle cx="92" cy="74" r="5" fill="#0a7b86"/>
+    <circle cx="120" cy="52" r="5" fill="#0a7b86"/>
+    <circle cx="140" cy="84" r="5" fill="#0a7b86"/>
+    <text x="10" y="112" class="ft-s">solo lo filtrado</text>
+  </g>
+
+  <!-- Línea de tiempo -->
+  <g transform="translate(270,182)">
+    <rect width="346" height="40" rx="10" fill="#0b1622"/>
+    <circle cx="22" cy="20" r="8" fill="#00e0e0"/>
+    <polygon points="19,16 27,20 19,24" fill="#0b1622"/>
+    <line x1="44" y1="20" x2="330" y2="20" stroke="#2bd9d9" stroke-width="2"/>
+    <rect x="120" y="14" width="90" height="12" rx="6" fill="#00e0e0" opacity="0.6"/>
+    <circle cx="120" cy="20" r="5" fill="#00e0e0"/>
+    <circle cx="210" cy="20" r="5" fill="#00e0e0"/>
+  </g>
+  <text x="270" y="244" class="ft-s">play · velocidad · reinicio · ocultar controles</text>
+
+  <!-- Tooltip -->
+  <g transform="translate(476,60)">
+    <rect width="140" height="60" rx="8" fill="#002b49"/>
+    <text x="12" y="22" class="ft-t" fill="#ffffff">Detalle del punto</text>
+    <text x="12" y="40" class="ft-s" fill="#cfe8ee">delito, fecha, base…</text>
+    <text x="12" y="54" class="ft-s" fill="#cfe8ee">tooltip al seleccionar</text>
+  </g>
+</svg>

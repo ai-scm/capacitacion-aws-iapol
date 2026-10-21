@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" role="img"
+     aria-label="Flujo conceptual: publicar en Amazon Quick y, como proceso institucional explicativo, integrar en IAPOL">
+  <defs>
+    <linearGradient id="fi-flecha" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#002b49"/>
+      <stop offset="100%" stop-color="#0a7b86"/>
+    </linearGradient>
+    <marker id="fi-punta" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0a7b86"/>
+    </marker>
+    <style>
+      .fi-tag  { font: 700 11px Montserrat, system-ui, sans-serif; fill: #ffffff; }
+      .fi-txt  { font: 400 11px Montserrat, system-ui, sans-serif; fill: #16212e; }
+      .fi-cap  { font: 700 12px Montserrat, system-ui, sans-serif; fill: #002b49; }
+      .fi-note { font: 600 10px Montserrat, system-ui, sans-serif; fill: #6b4bb0; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="680" height="300" rx="14" fill="#f2f0eb"/>
+
+  <text x="24" y="34" class="fi-cap">En Amazon Quick (lo hace el participante)</text>
+  <g transform="translate(24,48)">
+    <rect width="150" height="64" rx="10" fill="#ffffff" stroke="#00e0e0" stroke-width="2"/>
+    <rect width="150" height="22" rx="10" fill="#002b49"/>
+    <text x="12" y="16" class="fi-tag">PUBLICAR</text>
+    <text x="12" y="42" class="fi-txt">Dashboard listo</text>
+    <text x="12" y="56" class="fi-txt">y versionado</text>
+  </g>
+  <line x1="178" y1="80" x2="214" y2="80" stroke="url(#fi-flecha)" stroke-width="4" marker-end="url(#fi-punta)"/>
+  <g transform="translate(218,48)">
+    <rect width="150" height="64" rx="10" fill="#ffffff" stroke="#00e0e0" stroke-width="2"/>
+    <rect width="150" height="22" rx="10" fill="#002b49"/>
+    <text x="12" y="16" class="fi-tag">DASHBOARD ID</text>
+    <text x="12" y="42" class="fi-txt">Localizar y validar</text>
+    <text x="12" y="56" class="fi-txt">accesos</text>
+  </g>
+
+  <!-- Separador conceptual -->
+  <line x1="24" y1="150" x2="656" y2="150" stroke="#c3b2e8" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="24" y="176" class="fi-note">PROCESO INSTITUCIONAL IAPOL · solo se explica, no se ejecuta</text>
+
+  <g transform="translate(24,188)">
+    <rect width="190" height="72" rx="10" fill="#efeafb" stroke="#c3b2e8" stroke-width="2"/>
+    <text x="12" y="26" class="fi-cap">Registrar recurso</text>
+    <text x="12" y="46" class="fi-txt">en la interfaz</text>
+    <text x="12" y="60" class="fi-txt">administrativa</text>
+  </g>
+  <line x1="218" y1="224" x2="254" y2="224" stroke="url(#fi-flecha)" stroke-width="4" marker-end="url(#fi-punta)"/>
+  <g transform="translate(258,188)">
+    <rect width="190" height="72" rx="10" fill="#efeafb" stroke="#c3b2e8" stroke-width="2"/>
+    <text x="12" y="26" class="fi-cap">Módulo y visibilidad</text>
+    <text x="12" y="46" class="fi-txt">por usuario o rol</text>
+  </g>
+  <line x1="452" y1="224" x2="488" y2="224" stroke="url(#fi-flecha)" stroke-width="4" marker-end="url(#fi-punta)"/>
+  <g transform="translate(492,188)">
+    <rect width="164" height="72" rx="10" fill="#efeafb" stroke="#c3b2e8" stroke-width="2"/>
+    <text x="12" y="26" class="fi-cap">Verificar embebido</text>
+    <text x="12" y="46" class="fi-txt">se visualiza en</text>
+    <text x="12" y="60" class="fi-txt">el portal</text>
+  </g>
+</svg>

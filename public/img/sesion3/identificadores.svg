@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 260" role="img"
+     aria-label="Dataset ID, Analysis ID y Dashboard ID en Amazon Quick; id_quicksight en IAPOL guarda el mismo valor que el Dashboard ID">
+  <defs>
+    <marker id="id-punta" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0a7b86"/>
+    </marker>
+    <style>
+      .id-tag { font: 700 12px Montserrat, system-ui, sans-serif; fill: #ffffff; }
+      .id-sub { font: 400 11px Montserrat, system-ui, sans-serif; fill: #d9f6fb; }
+      .id-txt { font: 400 10px Montserrat, system-ui, sans-serif; fill: #16212e; }
+      .id-cap { font: 700 12px Montserrat, system-ui, sans-serif; fill: #002b49; }
+      .id-eq  { font: 700 13px Montserrat, system-ui, sans-serif; fill: #0a7b86; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="640" height="260" rx="14" fill="#f2f0eb"/>
+  <text x="24" y="32" class="id-cap">Amazon Quick</text>
+
+  <g transform="translate(24,44)">
+    <rect width="160" height="56" rx="10" fill="#0a3a57"/>
+    <text x="12" y="24" class="id-tag">Dataset ID</text>
+    <text x="12" y="44" class="id-sub">conjunto de datos</text>
+  </g>
+  <g transform="translate(24,112)">
+    <rect width="160" height="56" rx="10" fill="#0a3a57"/>
+    <text x="12" y="24" class="id-tag">Analysis ID</text>
+    <text x="12" y="44" class="id-sub">análisis editable</text>
+  </g>
+  <g transform="translate(24,180)">
+    <rect width="160" height="56" rx="10" fill="#0a7b86"/>
+    <text x="12" y="24" class="id-tag">Dashboard ID</text>
+    <text x="12" y="44" class="id-sub" fill="#eafafa">dashboard publicado</text>
+  </g>
+
+  <!-- Equivalencia Dashboard ID = id_quicksight -->
+  <line x1="190" y1="208" x2="306" y2="208" stroke="#0a7b86" stroke-width="4" marker-end="url(#id-punta)"/>
+  <text x="200" y="196" class="id-eq">mismo valor</text>
+
+  <text x="430" y="32" class="id-cap">IAPOL</text>
+  <g transform="translate(320,180)">
+    <rect width="296" height="56" rx="10" fill="#efeafb" stroke="#c3b2e8" stroke-width="2"/>
+    <text x="14" y="24" class="id-cap">id_quicksight</text>
+    <text x="14" y="44" class="id-txt">= Dashboard ID (solo cambia el nombre del campo)</text>
+  </g>
+  <g transform="translate(320,96)">
+    <rect width="296" height="56" rx="10" fill="#efeafb" stroke="#c3b2e8" stroke-width="2"/>
+    <text x="14" y="24" class="id-cap">id_portal</text>
+    <text x="14" y="44" class="id-txt">campo propio de IAPOL · función por corroborar</text>
+  </g>
+</svg>

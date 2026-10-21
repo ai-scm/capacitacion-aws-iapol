@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 230" role="img"
+     aria-label="Las tres hojas del análisis: Resumen ejecutivo con KPIs y barras, Análisis detallado con tabla, y Tendencias con gráfico de líneas">
+  <defs>
+    <style>
+      .th-tit { font: 700 12px Montserrat, system-ui, sans-serif; fill: #002b49; }
+      .th-sub { font: 400 10px Montserrat, system-ui, sans-serif; fill: #44546a; }
+      .th-tab { font: 700 10px Montserrat, system-ui, sans-serif; fill: #0a7b86; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="660" height="230" rx="14" fill="#f2f0eb"/>
+
+  <!-- Hoja 1: Resumen ejecutivo -->
+  <g transform="translate(20,40)">
+    <rect width="195" height="170" rx="12" fill="#ffffff" stroke="#00e0e0" stroke-width="2"/>
+    <rect width="195" height="26" rx="12" fill="#002b49"/>
+    <text x="12" y="18" class="th-tab" fill="#ffffff">HOJA 1</text>
+    <text x="12" y="48" class="th-tit">Resumen ejecutivo</text>
+    <text x="12" y="64" class="th-sub">KPIs + barras</text>
+    <rect x="12" y="74" width="50" height="34" rx="6" fill="#d6f7f7"/>
+    <rect x="70" y="74" width="50" height="34" rx="6" fill="#d6f7f7"/>
+    <rect x="128" y="74" width="55" height="34" rx="6" fill="#d6f7f7"/>
+    <rect x="12" y="120" width="26" height="36" fill="#0a7b86"/>
+    <rect x="46" y="134" width="26" height="22" fill="#0a7b86"/>
+    <rect x="80" y="126" width="26" height="30" fill="#0a7b86"/>
+    <rect x="114" y="116" width="26" height="40" fill="#0a7b86"/>
+    <rect x="148" y="140" width="26" height="16" fill="#0a7b86"/>
+  </g>
+
+  <!-- Hoja 2: Análisis detallado -->
+  <g transform="translate(232,40)">
+    <rect width="195" height="170" rx="12" fill="#ffffff" stroke="#00e0e0" stroke-width="2"/>
+    <rect width="195" height="26" rx="12" fill="#002b49"/>
+    <text x="12" y="18" class="th-tab" fill="#ffffff">HOJA 2</text>
+    <text x="12" y="48" class="th-tit">Análisis detallado</text>
+    <text x="12" y="64" class="th-sub">Tabla + distancia media</text>
+    <rect x="12" y="76" width="171" height="18" fill="#eef2f6"/>
+    <rect x="12" y="98" width="171" height="16" fill="#f7f9fc"/>
+    <rect x="12" y="116" width="171" height="16" fill="#eef2f6"/>
+    <rect x="12" y="134" width="171" height="16" fill="#f7f9fc"/>
+    <line x1="69" y1="76" x2="69" y2="150" stroke="#d9e0e8"/>
+    <line x1="126" y1="76" x2="126" y2="150" stroke="#d9e0e8"/>
+  </g>
+
+  <!-- Hoja 3: Tendencias -->
+  <g transform="translate(444,40)">
+    <rect width="195" height="170" rx="12" fill="#ffffff" stroke="#00e0e0" stroke-width="2"/>
+    <rect width="195" height="26" rx="12" fill="#002b49"/>
+    <text x="12" y="18" class="th-tab" fill="#ffffff">HOJA 3</text>
+    <text x="12" y="48" class="th-tit">Tendencias</text>
+    <text x="12" y="64" class="th-sub">Líneas en el tiempo</text>
+    <polyline points="14,146 46,120 78,132 110,96 142,108 174,78"
+              fill="none" stroke="#0a7b86" stroke-width="3"/>
+    <line x1="12" y1="150" x2="183" y2="150" stroke="#d9e0e8"/>
+  </g>
+</svg>

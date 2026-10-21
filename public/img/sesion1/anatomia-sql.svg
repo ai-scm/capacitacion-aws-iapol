@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 230" role="img"
+     aria-label="Anatomía de una consulta SQL: SELECT elige columnas, FROM la tabla, WHERE filtra filas, GROUP BY agrupa y ORDER BY ordena el resultado">
+  <defs>
+    <style>
+      .sq-cap { font: 700 13px Montserrat, system-ui, sans-serif; fill: #002b49; }
+      .sq-kw  { font: 700 13px ui-monospace, Menlo, Consolas, monospace; fill: #00e0e0; }
+      .sq-tx  { font: 400 13px ui-monospace, Menlo, Consolas, monospace; fill: #e6edf3; }
+      .sq-note{ font: 600 10px Montserrat, system-ui, sans-serif; fill: #0a7b86; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="640" height="230" rx="14" fill="#f2f0eb"/>
+  <text x="24" y="32" class="sq-cap">Anatomía de una consulta SQL</text>
+
+  <!-- editor -->
+  <rect x="24" y="46" width="592" height="150" rx="10" fill="#0b1622"/>
+  <text x="40" y="76" class="sq-kw">SELECT <tspan class="sq-tx">payment_type, COUNT(*) AS viajes</tspan></text>
+  <text x="40" y="100" class="sq-kw">FROM <tspan class="sq-tx">yellow_taxi</tspan></text>
+  <text x="40" y="124" class="sq-kw">WHERE <tspan class="sq-tx">trip_distance &gt; 5</tspan></text>
+  <text x="40" y="148" class="sq-kw">GROUP BY <tspan class="sq-tx">payment_type</tspan></text>
+  <text x="40" y="172" class="sq-kw">ORDER BY <tspan class="sq-tx">viajes DESC</tspan></text>
+
+  <!-- anotaciones -->
+  <text x="430" y="76" class="sq-note">qué columnas</text>
+  <text x="430" y="100" class="sq-note">de qué tabla</text>
+  <text x="430" y="124" class="sq-note">filtra filas</text>
+  <text x="430" y="148" class="sq-note">agrupa</text>
+  <text x="430" y="172" class="sq-note">ordena</text>
+</svg>

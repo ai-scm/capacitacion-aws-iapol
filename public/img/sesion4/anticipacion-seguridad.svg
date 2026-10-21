@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 250" role="img"
+     aria-label="Mapa Anticipación a Fenómenos de Seguridad: superpone capas de cuadrantes, instituciones, patrullas, microterritorios, predicciones, cuadrantes virtuales, hechos reales y puntos de apoyo, con búsqueda por unidad">
+  <defs>
+    <style>
+      .as-cap { font: 700 13px Montserrat, system-ui, sans-serif; fill: #002b49; }
+      .as-t   { font: 600 10px Montserrat, system-ui, sans-serif; fill: #16212e; }
+      .as-btn { font: 700 10px Montserrat, system-ui, sans-serif; fill: #ffffff; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="640" height="250" rx="14" fill="#f2f0eb"/>
+  <text x="24" y="34" class="as-cap">Anticipación a Fenómenos de Seguridad</text>
+
+  <!-- Mapa -->
+  <g transform="translate(24,48)">
+    <rect width="400" height="184" rx="10" fill="#dfe7ee" stroke="#c4ccd6"/>
+    <!-- cuadrantes -->
+    <g stroke="#9aa3ad" stroke-width="1" opacity="0.6">
+      <line x1="100" y1="0" x2="100" y2="184"/>
+      <line x1="200" y1="0" x2="200" y2="184"/>
+      <line x1="300" y1="0" x2="300" y2="184"/>
+      <line x1="0" y1="61" x2="400" y2="61"/>
+      <line x1="0" y1="122" x2="400" y2="122"/>
+    </g>
+    <!-- predicción (zona) -->
+    <polygon points="210,20 300,30 290,90 220,80" fill="#e8830c" opacity="0.35" stroke="#e8830c"/>
+    <!-- microterritorio -->
+    <circle cx="120" cy="90" r="30" fill="#6b4bb0" opacity="0.2" stroke="#6b4bb0" stroke-dasharray="4 3"/>
+    <!-- patrullas -->
+    <circle cx="80" cy="50" r="5" fill="#1b63b0"/>
+    <circle cx="150" cy="140" r="5" fill="#1b63b0"/>
+    <!-- hechos reales -->
+    <rect x="250" y="55" width="8" height="8" fill="#b42318"/>
+    <rect x="270" y="70" width="8" height="8" fill="#b42318"/>
+    <!-- punto de apoyo / institución -->
+    <polygon points="330,130 338,146 322,146" fill="#0a7b86"/>
+  </g>
+
+  <!-- Leyenda -->
+  <g transform="translate(440,48)">
+    <rect width="176" height="184" rx="10" fill="#ffffff" stroke="#d9e0e8"/>
+    <rect x="12" y="14" width="152" height="26" rx="8" fill="#1b8f4d"/>
+    <text x="24" y="31" class="as-btn">Buscar unidad</text>
+    <g transform="translate(12,52)">
+      <circle cx="6" cy="6" r="5" fill="#1b63b0"/><text x="18" y="10" class="as-t">Patrullas</text>
+      <rect x="1" y="24" width="10" height="10" fill="#b42318"/><text x="18" y="33" class="as-t">Hechos reales</text>
+      <polygon points="6,46 11,56 1,56" fill="#0a7b86"/><text x="18" y="56" class="as-t">Puntos de apoyo</text>
+      <rect x="1" y="68" width="10" height="10" fill="#e8830c" opacity="0.5"/><text x="18" y="77" class="as-t">Predicción</text>
+      <circle cx="6" cy="94" r="5" fill="none" stroke="#6b4bb0" stroke-dasharray="3 2"/><text x="18" y="98" class="as-t">Microterritorios</text>
+      <line x1="1" y1="116" x2="11" y2="116" stroke="#9aa3ad"/><text x="18" y="120" class="as-t">Cuadrantes</text>
+    </g>
+  </g>
+</svg>

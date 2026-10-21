@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 260" role="img"
+     aria-label="Del análisis editable al dashboard publicado en Amazon Quick">
+  <defs>
+    <linearGradient id="pd-flecha" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#002b49"/>
+      <stop offset="100%" stop-color="#0a7b86"/>
+    </linearGradient>
+    <style>
+      .pd-titulo { font: 700 16px Montserrat, system-ui, sans-serif; fill: #002b49; }
+      .pd-sub    { font: 500 12px Montserrat, system-ui, sans-serif; fill: #0a7b86; }
+      .pd-txt    { font: 400 11px Montserrat, system-ui, sans-serif; fill: #16212e; }
+      .pd-tag    { font: 700 10px Montserrat, system-ui, sans-serif; fill: #ffffff; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="640" height="260" rx="14" fill="#f2f0eb"/>
+
+  <!-- Análisis editable -->
+  <g transform="translate(28,40)">
+    <rect width="220" height="180" rx="12" fill="#ffffff" stroke="#00e0e0" stroke-width="2"/>
+    <rect x="0" y="0" width="220" height="34" rx="12" fill="#002b49"/>
+    <text x="16" y="22" class="pd-tag">ANÁLISIS (EDITABLE)</text>
+    <text x="16" y="62" class="pd-sub">Hojas y visualizaciones</text>
+    <rect x="16" y="76" width="86" height="40" rx="6" fill="#d6f7f7"/>
+    <rect x="114" y="76" width="90" height="40" rx="6" fill="#d6f7f7"/>
+    <rect x="16" y="124" width="188" height="40" rx="6" fill="#d6f7f7"/>
+    <text x="16" y="150" class="pd-txt">Se edita, se prueba, se calcula</text>
+  </g>
+
+  <!-- Flecha Publicar -->
+  <g transform="translate(260,130)">
+    <line x1="0" y1="0" x2="92" y2="0" stroke="url(#pd-flecha)" stroke-width="4"
+          marker-end="url(#pd-punta)"/>
+    <text x="4" y="-14" class="pd-sub">Publicar</text>
+  </g>
+  <defs>
+    <marker id="pd-punta" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0a7b86"/>
+    </marker>
+  </defs>
+
+  <!-- Dashboard publicado -->
+  <g transform="translate(392,40)">
+    <rect width="220" height="180" rx="12" fill="#ffffff" stroke="#002b49" stroke-width="2"/>
+    <rect x="0" y="0" width="220" height="34" rx="12" fill="#0a7b86"/>
+    <text x="16" y="22" class="pd-tag">DASHBOARD (PUBLICADO)</text>
+    <text x="16" y="62" class="pd-sub">Solo lectura · compartible</text>
+    <rect x="16" y="76" width="60" height="88" rx="6" fill="#eef2f6"/>
+    <rect x="86" y="76" width="118" height="42" rx="6" fill="#eef2f6"/>
+    <rect x="86" y="122" width="118" height="42" rx="6" fill="#eef2f6"/>
+    <text x="16" y="150" class="pd-txt" transform="translate(0,0)"></text>
+  </g>
+</svg>

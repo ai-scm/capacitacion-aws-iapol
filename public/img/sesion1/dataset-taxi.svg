@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 250" role="img"
+     aria-label="Dataset de ejemplo NYC Yellow Taxi: una tabla con columnas como fecha de recogida, tipo de pago, pasajeros, distancia e importe, almacenada en formato Parquet en Amazon S3">
+  <defs>
+    <style>
+      .ds-cap { font: 700 13px Montserrat, system-ui, sans-serif; fill: #002b49; }
+      .ds-h   { font: 700 10px Montserrat, system-ui, sans-serif; fill: #ffffff; }
+      .ds-c   { font: 400 10px Montserrat, system-ui, sans-serif; fill: #16212e; }
+      .ds-tag { font: 700 10px Montserrat, system-ui, sans-serif; fill: #0a7b86; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="640" height="250" rx="14" fill="#f2f0eb"/>
+  <text x="24" y="34" class="ds-cap">NYC Yellow Taxi · enero 2024 (ejemplo)</text>
+
+  <!-- Tabla -->
+  <g transform="translate(24,48)">
+    <rect width="420" height="178" rx="10" fill="#ffffff" stroke="#d9e0e8"/>
+    <!-- cabecera -->
+    <rect width="420" height="30" rx="10" fill="#002b49"/>
+    <rect y="18" width="420" height="12" fill="#002b49"/>
+    <text x="10" y="20" class="ds-h">pickup</text>
+    <text x="104" y="20" class="ds-h">pago</text>
+    <text x="168" y="20" class="ds-h">pasaj.</text>
+    <text x="236" y="20" class="ds-h">distancia</text>
+    <text x="330" y="20" class="ds-h">importe</text>
+    <!-- filas -->
+    <g>
+      <rect y="30" width="420" height="24" fill="#ffffff"/>
+      <rect y="54" width="420" height="24" fill="#f4f7fb"/>
+      <rect y="78" width="420" height="24" fill="#ffffff"/>
+      <rect y="102" width="420" height="24" fill="#f4f7fb"/>
+      <rect y="126" width="420" height="24" fill="#ffffff"/>
+      <rect y="150" width="420" height="24" fill="#f4f7fb"/>
+    </g>
+    <text x="10" y="46" class="ds-c">2024-01-05 08:30</text>
+    <text x="104" y="46" class="ds-c">tarjeta</text>
+    <text x="176" y="46" class="ds-c">1</text>
+    <text x="236" y="46" class="ds-c">2.5</text>
+    <text x="330" y="46" class="ds-c">14.30</text>
+    <text x="10" y="70" class="ds-c">2024-01-06 18:15</text>
+    <text x="104" y="70" class="ds-c">efectivo</text>
+    <text x="176" y="70" class="ds-c">2</text>
+    <text x="236" y="70" class="ds-c">4.1</text>
+    <text x="330" y="70" class="ds-c">22.80</text>
+    <text x="10" y="94" class="ds-c">2024-01-07 21:05</text>
+    <text x="104" y="94" class="ds-c">tarjeta</text>
+    <text x="176" y="94" class="ds-c">1</text>
+    <text x="236" y="94" class="ds-c">1.2</text>
+    <text x="330" y="94" class="ds-c">9.10</text>
+    <text x="10" y="118" class="ds-c">2024-01-09 07:50</text>
+    <text x="104" y="118" class="ds-c">tarjeta</text>
+    <text x="176" y="118" class="ds-c">3</text>
+    <text x="236" y="118" class="ds-c">6.8</text>
+    <text x="330" y="118" class="ds-c">31.40</text>
+    <text x="10" y="142" class="ds-c">2024-01-11 14:20</text>
+    <text x="104" y="142" class="ds-c">efectivo</text>
+    <text x="176" y="142" class="ds-c">1</text>
+    <text x="236" y="142" class="ds-c">0.9</text>
+    <text x="330" y="142" class="ds-c">7.75</text>
+    <text x="10" y="166" class="ds-c">…</text>
+    <text x="330" y="166" class="ds-c">…</text>
+  </g>
+
+  <!-- formato / S3 -->
+  <g transform="translate(466,48)">
+    <rect width="150" height="178" rx="10" fill="#ffffff" stroke="#1b8f4d" stroke-width="2"/>
+    <rect width="150" height="30" rx="10" fill="#1b8f4d"/>
+    <rect y="18" width="150" height="12" fill="#1b8f4d"/>
+    <text x="12" y="20" class="ds-h">Amazon S3</text>
+    <text x="12" y="52" class="ds-tag">Formato Parquet</text>
+    <text x="12" y="72" class="ds-c">· Columnar</text>
+    <text x="12" y="90" class="ds-c">· Comprimido</text>
+    <text x="12" y="108" class="ds-c">· Eficiente para</text>
+    <text x="22" y="122" class="ds-c">lectura analítica</text>
+    <text x="12" y="150" class="ds-tag">~320 registros</text>
+    <text x="12" y="166" class="ds-c">en el ejemplo local</text>
+  </g>
+</svg>

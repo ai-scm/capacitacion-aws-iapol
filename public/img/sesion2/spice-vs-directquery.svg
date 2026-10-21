@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 230" role="img"
+     aria-label="SPICE guarda una copia en memoria para dashboards rápidos y estables; Direct Query consulta la fuente en vivo para datos más frescos">
+  <defs>
+    <marker id="sp-tip" viewBox="0 0 10 10" refX="7.5" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0a7b86"/>
+    </marker>
+    <style>
+      .sp-cap { font: 700 12px Montserrat, system-ui, sans-serif; fill: #002b49; }
+      .sp-tx  { font: 400 10px Montserrat, system-ui, sans-serif; fill: #44546a; }
+      .sp-tag { font: 700 10px Montserrat, system-ui, sans-serif; fill: #ffffff; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="640" height="230" rx="14" fill="#f2f0eb"/>
+
+  <!-- SPICE -->
+  <g transform="translate(24,24)">
+    <rect width="286" height="182" rx="12" fill="#ffffff" stroke="#e8830c" stroke-width="2"/>
+    <rect width="286" height="30" rx="12" fill="#e8830c"/>
+    <rect y="18" width="286" height="12" fill="#e8830c"/>
+    <text x="14" y="20" class="sp-tag">SPICE (copia en memoria)</text>
+    <rect x="20" y="52" width="70" height="44" rx="8" fill="#eef2f6"/>
+    <text x="30" y="78" class="sp-tx">Fuente</text>
+    <path d="M94 74 L 134 74" stroke="#e8830c" stroke-width="2.5" marker-end="url(#sp-tip)"/>
+    <rect x="138" y="52" width="70" height="44" rx="8" fill="#ffe4c2"/>
+    <text x="150" y="72" class="sp-tx">copia</text>
+    <text x="150" y="86" class="sp-tx">SPICE</text>
+    <path d="M212 74 L 252 74" stroke="#e8830c" stroke-width="2.5" marker-end="url(#sp-tip)"/>
+    <rect x="248" y="52" width="26" height="44" rx="6" fill="#e8830c" opacity="0.25"/>
+    <text x="14" y="124" class="sp-cap" fill="#b4610a">Rápido y estable</text>
+    <text x="14" y="144" class="sp-tx">· Ideal para dashboards interactivos</text>
+    <text x="14" y="160" class="sp-tx">· Se actualiza por programación</text>
+    <text x="14" y="176" class="sp-tx">· Puede mostrar datos no frescos</text>
+  </g>
+
+  <!-- Direct Query -->
+  <g transform="translate(330,24)">
+    <rect width="286" height="182" rx="12" fill="#ffffff" stroke="#1b63b0" stroke-width="2"/>
+    <rect width="286" height="30" rx="12" fill="#1b63b0"/>
+    <rect y="18" width="286" height="12" fill="#1b63b0"/>
+    <text x="14" y="20" class="sp-tag">Direct Query (en vivo)</text>
+    <rect x="20" y="52" width="70" height="44" rx="8" fill="#eef2f6"/>
+    <text x="30" y="78" class="sp-tx">Fuente</text>
+    <path d="M94 74 L 244 74" stroke="#1b63b0" stroke-width="2.5" marker-end="url(#sp-tip)"/>
+    <rect x="248" y="52" width="26" height="44" rx="6" fill="#1b63b0" opacity="0.25"/>
+    <text x="14" y="124" class="sp-cap" fill="#174f8c">Datos frescos</text>
+    <text x="14" y="144" class="sp-tx">· Consulta la fuente en cada vista</text>
+    <text x="14" y="160" class="sp-tx">· Útil si la frescura es prioritaria</text>
+    <text x="14" y="176" class="sp-tx">· Depende del rendimiento de origen</text>
+  </g>
+</svg>
