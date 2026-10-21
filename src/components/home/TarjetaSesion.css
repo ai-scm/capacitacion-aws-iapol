@@ -1,0 +1,144 @@
+/*
+ * Estilos de la tarjeta de Sesión (TarjetaSesion) — R1.
+ *
+ * Tarjeta vertical de marca: superficie clara con una franja de acento turquesa
+ * superior, número de sesión en círculo squid ink y una acción destacada al
+ * pie. Toda la tarjeta es un <button> accesible.
+ */
+
+.tarjeta-sesion {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--espacio-3);
+  width: 100%;
+  margin: 0;
+  padding: var(--espacio-6) var(--espacio-5) var(--espacio-5);
+  border: 1px solid var(--color-borde);
+  border-top: 4px solid var(--color-turquesa);
+  border-radius: var(--radio-lg);
+  background: var(--color-superficie);
+  color: var(--color-texto);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: var(--sombra-sm);
+  transition:
+    transform 200ms var(--curva-transicion),
+    box-shadow 200ms var(--curva-transicion),
+    border-color 200ms var(--curva-transicion);
+}
+
+.tarjeta-sesion:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-lg);
+  border-top-color: var(--color-turquesa-400);
+}
+
+.tarjeta-sesion:focus-visible {
+  outline: 3px solid var(--color-turquesa-400);
+  outline-offset: 3px;
+}
+
+.tarjeta-sesion__numero {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--grad-marca);
+  color: var(--color-turquesa);
+  font-size: 1.375rem;
+  font-weight: var(--peso-extra);
+  box-shadow: var(--sombra-sm);
+}
+
+.tarjeta-sesion__cuerpo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-2);
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.tarjeta-sesion__eyebrow {
+  font-size: var(--texto-xs);
+  font-weight: var(--peso-fuerte);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-turquesa-texto);
+}
+
+.tarjeta-sesion__titulo {
+  font-size: var(--texto-lg);
+  font-weight: var(--peso-fuerte);
+  line-height: 1.3;
+  color: var(--color-squid-ink);
+}
+
+.tarjeta-sesion__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--espacio-2);
+  margin-top: var(--espacio-1);
+  font-size: var(--texto-sm);
+}
+
+.tarjeta-sesion__duracion {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2em 0.7em;
+  border-radius: var(--radio-pildora);
+  background: var(--color-superficie-alt);
+  color: var(--color-slate-600);
+  font-weight: var(--peso-semi);
+}
+
+.tarjeta-sesion__avance {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2em 0.7em;
+  border-radius: var(--radio-pildora);
+  background: var(--badge-plano-quick-real-bg);
+  color: var(--badge-plano-quick-real-fg);
+  font-weight: var(--peso-semi);
+}
+
+.tarjeta-sesion__avance--completada {
+  background: var(--color-exito-bg);
+  color: var(--color-exito);
+}
+
+.tarjeta-sesion__accion {
+  margin-top: var(--espacio-2);
+  font-weight: var(--peso-fuerte);
+  color: var(--color-squid-ink);
+  white-space: nowrap;
+  transition: color 200ms var(--curva-transicion), gap 200ms var(--curva-transicion);
+}
+
+.tarjeta-sesion:hover .tarjeta-sesion__accion {
+  color: var(--color-turquesa-texto);
+}
+
+/* Responsive: en columna única se mantiene cómodo el padding. */
+@media (max-width: 768px) {
+  .tarjeta-sesion {
+    padding: var(--espacio-5) var(--espacio-4);
+  }
+}
+
+/* Respeta la preferencia de movimiento reducido (R6.2). */
+@media (prefers-reduced-motion: reduce) {
+  .tarjeta-sesion {
+    transition: none;
+  }
+
+  .tarjeta-sesion:hover {
+    transform: none;
+  }
+}

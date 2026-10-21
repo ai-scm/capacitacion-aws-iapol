@@ -1,0 +1,53 @@
+/*
+ * Estilos de las insignias de plano (BadgePlano / BadgeSimulacion) — R21.1.
+ *
+ * Diferenciación visual de los tres planos con los tokens de marca definidos en
+ * theme.css. Cada insignia lleva un punto de color a la izquierda para reforzar
+ * la distinción incluso en escala de grises.
+ */
+
+.badge-plano {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0.25em 0.7em;
+  border: 1px solid transparent;
+  border-radius: var(--radio-pildora, 999px);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* Punto indicador de color (refuerza la diferenciación, R21.1). */
+.badge-plano::before {
+  content: '';
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background: currentColor;
+  flex: 0 0 auto;
+}
+
+/* Plano "Amazon Quick real": tono informativo (azul de marca). */
+.badge-plano--quick-real {
+  background: var(--badge-plano-quick-real-bg, #e2eef7);
+  color: var(--badge-plano-quick-real-fg, #003057);
+  border-color: var(--badge-plano-quick-real-border, #9cc3e0);
+}
+
+/* Plano "Simulación local": tono de acento turquesa (atención). */
+.badge-plano--simulacion-local {
+  background: var(--badge-plano-simulacion-bg, #d6f7f7);
+  color: var(--badge-plano-simulacion-fg, #0a5c63);
+  border-color: var(--badge-plano-simulacion-border, #58dcdc);
+}
+
+/* Plano "Proceso institucional IAPOL": tono institucional (violeta). */
+.badge-plano--iapol {
+  background: var(--badge-plano-iapol-bg, #efeafb);
+  color: var(--badge-plano-iapol-fg, #4b2e83);
+  border-color: var(--badge-plano-iapol-border, #c3b2e8);
+}

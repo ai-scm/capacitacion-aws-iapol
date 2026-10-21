@@ -1,0 +1,78 @@
+/*
+ * Estilos de la pantalla principal (PantallaPrincipal / Home) — R1, R17.
+ *
+ * Portada de marca Blend: un hero en squid ink con degradado y el motivo de
+ * ondas, seguido de la lista de tarjetas de Sesión sobre fondo hueso.
+ */
+
+.pantalla-principal {
+  width: 100%;
+}
+
+/* --- Hero / cabecera de marca ------------------------------------------ */
+.pantalla-principal__cabecera {
+  position: relative;
+  overflow: hidden;
+  background: var(--grad-marca);
+  color: var(--color-texto-invertido);
+  padding: var(--espacio-8) var(--espacio-5);
+}
+
+.pantalla-principal__cabecera-contenido {
+  position: relative;
+  z-index: 1;
+  max-width: 60rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pantalla-principal__eyebrow {
+  margin: 0 0 var(--espacio-3);
+  font-size: var(--texto-sm);
+  font-weight: var(--peso-semi);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-turquesa);
+}
+
+.pantalla-principal__titulo {
+  margin: 0 0 var(--espacio-4);
+  font-size: clamp(1.75rem, 4.5vw, 3rem);
+  font-weight: var(--peso-extra);
+  line-height: 1.1;
+  color: var(--color-texto-invertido);
+  letter-spacing: -0.02em;
+}
+
+.pantalla-principal__subtitulo {
+  margin: 0 auto;
+  max-width: 46rem;
+  font-size: var(--texto-lg);
+  line-height: 1.6;
+  color: rgba(242, 240, 235, 0.86);
+}
+
+/* --- Lista de sesiones ------------------------------------------------- */
+.pantalla-principal__sesiones {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: var(--espacio-8) var(--espacio-5);
+  display: grid;
+  gap: var(--espacio-5);
+}
+
+@media (min-width: 720px) {
+  .pantalla-principal__sesiones {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pantalla-principal__cabecera {
+    padding: var(--espacio-6) var(--espacio-4);
+  }
+
+  .pantalla-principal__sesiones {
+    padding: var(--espacio-6) var(--espacio-4);
+  }
+}
