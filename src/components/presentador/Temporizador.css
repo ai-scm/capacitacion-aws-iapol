@@ -1,0 +1,71 @@
+/*
+ * Estilos del Temporizador del Modo_Presentador — R5.3–R5.6.
+ *
+ * Consume los tokens del tema (theme.css). La pantalla usa cifras tabulares
+ * para que el ancho no "salte" al avanzar los segundos. Los botones respetan el
+ * tamaño mínimo táctil del tema para ser cómodos también en tablet.
+ */
+
+.temporizador {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-3);
+  align-items: stretch;
+}
+
+.temporizador__pantalla {
+  font-family: var(--fuente-mono, monospace);
+  font-size: var(--texto-3xl);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  color: var(--color-texto);
+  padding: var(--espacio-3) var(--espacio-4);
+  background-color: var(--color-superficie-alt);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-md);
+}
+
+.temporizador__controles {
+  display: flex;
+  gap: var(--espacio-2);
+}
+
+.temporizador__boton {
+  flex: 1 1 0;
+  min-height: var(--tam-min-tactil, 44px);
+  padding: var(--espacio-2) var(--espacio-3);
+  font-size: var(--texto-base);
+  font-weight: 600;
+  color: var(--color-texto);
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde-fuerte);
+  border-radius: var(--radio-sm);
+  cursor: pointer;
+}
+
+.temporizador__boton:hover {
+  background-color: var(--color-superficie-alt);
+}
+
+.temporizador__boton--primario {
+  color: var(--color-texto-invertido);
+  background-color: var(--color-primario);
+  border-color: var(--color-primario);
+}
+
+.temporizador__boton--primario:hover {
+  background-color: var(--color-primario-hover);
+  border-color: var(--color-primario-hover);
+}
+
+.temporizador__boton:focus-visible {
+  outline: 2px solid var(--color-enfoque);
+  outline-offset: 2px;
+}
+
+.temporizador__boton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

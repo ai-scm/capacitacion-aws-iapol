@@ -1,0 +1,181 @@
+/*
+ * Estilos del Modo_Presentador — R5.1, R5.2, R5.3, R5.7, R5.8.
+ *
+ * La misma UI (`.modo-presentador`) se usa en dos ubicaciones:
+ *  - Ventana secundaria (portal): ocupa todo el documento de la ventana.
+ *  - Superposición de respaldo (`.modo-presentador-overlay`): panel lateral
+ *    sobre la pestaña actual cuando la ventana emergente está bloqueada.
+ *
+ * Consume los tokens del tema (theme.css).
+ */
+
+/* Contenedor raíz dentro de la ventana secundaria portalizada. */
+.modo-presentador-ventana {
+  min-height: 100vh;
+  background-color: var(--color-fondo);
+}
+
+/* --- Superposición de respaldo (misma pestaña) -------------------------- */
+.modo-presentador-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.modo-presentador-overlay__panel {
+  width: min(560px, 100%);
+  height: 100%;
+  overflow-y: auto;
+  background-color: var(--color-fondo);
+  box-shadow: var(--sombra-lg);
+}
+
+/* --- Vista del presentador (común a ambas ubicaciones) ------------------ */
+.modo-presentador {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-4);
+  min-height: 100%;
+  padding: var(--espacio-5);
+  color: var(--color-texto);
+}
+
+.modo-presentador__cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacio-3);
+  flex-wrap: wrap;
+}
+
+.modo-presentador__contexto {
+  display: flex;
+  flex-direction: column;
+}
+
+.modo-presentador__sesion {
+  font-size: var(--texto-sm);
+  font-weight: 700;
+  color: var(--color-texto-suave);
+}
+
+.modo-presentador__posicion {
+  font-size: var(--texto-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-texto-suave);
+}
+
+.modo-presentador__cerrar {
+  min-height: var(--tam-min-tactil, 44px);
+  padding: var(--espacio-2) var(--espacio-4);
+  font-size: var(--texto-sm);
+  font-weight: 600;
+  color: var(--color-texto);
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde-fuerte);
+  border-radius: var(--radio-sm);
+  cursor: pointer;
+}
+
+.modo-presentador__cerrar:hover {
+  background-color: var(--color-superficie-alt);
+}
+
+.modo-presentador__cerrar:focus-visible {
+  outline: 2px solid var(--color-enfoque);
+  outline-offset: 2px;
+}
+
+.modo-presentador__cuerpo {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+  gap: var(--espacio-5);
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.modo-presentador__principal {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-4);
+  min-width: 0;
+}
+
+.modo-presentador__lateral {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-4);
+  min-width: 0;
+}
+
+.modo-presentador__titulo {
+  margin: 0;
+  font-size: var(--texto-2xl);
+  font-weight: 700;
+}
+
+.modo-presentador__subtitulo {
+  margin: 0 0 var(--espacio-2);
+  font-size: var(--texto-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-texto-suave);
+}
+
+.modo-presentador__objetivos,
+.modo-presentador__notas {
+  padding: var(--espacio-4);
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-md);
+}
+
+/* Las notas del instructor se destacan con un acento para localizarlas rápido. */
+.modo-presentador__notas {
+  border-left: 4px solid var(--color-primario);
+}
+
+.modo-presentador__lista-objetivos {
+  margin: 0;
+  padding-left: var(--espacio-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-1);
+  font-size: var(--texto-base);
+}
+
+.modo-presentador__notas-texto {
+  margin: 0;
+  font-size: var(--texto-lg);
+  line-height: var(--interlineado, 1.5);
+  white-space: pre-wrap;
+}
+
+.modo-presentador__sin-datos {
+  margin: 0;
+  font-size: var(--texto-sm);
+  font-style: italic;
+  color: var(--color-texto-suave);
+}
+
+.modo-presentador__vacio {
+  margin: 0;
+  padding: var(--espacio-6);
+  text-align: center;
+  color: var(--color-texto-suave);
+}
+
+/* --- Responsive (R17): en pantallas estrechas, una sola columna --------- */
+@media (max-width: 768px) {
+  .modo-presentador__cuerpo {
+    grid-template-columns: 1fr;
+  }
+
+  .modo-presentador-overlay__panel {
+    width: 100%;
+  }
+}

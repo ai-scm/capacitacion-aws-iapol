@@ -1,0 +1,35 @@
+/*
+ * Estilos de ControlesNavegacion — R3, R4, R17.3.
+ *
+ * Consume los tokens del tema (theme.css) y los estilos base de botón
+ * (base.css), que ya garantizan el objetivo de toque mínimo (~44px, R17.3) y
+ * la adaptación responsive en viewport ≤768px (regla `.controles-navegacion`
+ * de base.css, que apila los botones a ancho completo). Aquí se define la
+ * disposición de escritorio/tableta y pequeños acentos.
+ */
+
+.controles-navegacion {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--espacio-3);
+  padding: var(--espacio-2) 0;
+}
+
+.controles-navegacion__boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--espacio-2);
+  font-weight: var(--peso-fuerte);
+}
+
+/*
+ * El botón de pantalla completa se separa visualmente de los de navegación,
+ * ocupando el centro cuando hay espacio.
+ */
+.controles-navegacion__boton--pantalla-completa {
+  margin-inline: var(--espacio-4);
+}

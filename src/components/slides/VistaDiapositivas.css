@@ -1,0 +1,86 @@
+/*
+ * Estilos de la vista de diapositivas (VistaDiapositivas) — R2, R6, R17.
+ *
+ * Consume los tokens del tema (theme.css) y los helpers de transición de
+ * base.css (`.transicion-diapositiva*`). El dimensionado 16:9 se realiza
+ * preferentemente por JS (ResizeObserver + domain/layout.js) aplicando ancho y
+ * alto en línea; cuando esa API no está disponible, la clase `--auto` recurre a
+ * `aspect-ratio` como fallback CSS.
+ */
+
+.vista-diapositivas {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  gap: var(--espacio-2);
+}
+
+/*
+ * Marco: ocupa todo el espacio disponible y centra la diapositiva, produciendo
+ * los bordes vacíos (letterboxing/pillarboxing) alrededor del recuadro 16:9.
+ * El fondo oscuro de los bordes evoca una proyección.
+ */
+.vista-diapositivas__marco {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--color-squid-ink-950);
+  border-radius: var(--radio-md);
+}
+
+/*
+ * Recuadro de la diapositiva. Cuando VistaDiapositivas calcula dimensiones con
+ * el ResizeObserver, fija width/height en línea. La relación 16:9 queda así
+ * garantizada por la lógica de dominio.
+ */
+.vista-diapositivas__diapositiva {
+  position: relative;
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+  box-shadow: var(--sombra-lg);
+  overflow: hidden;
+  /*
+   * Escala tipográfica relativa al ancho del recuadro para que el contenido
+   * crezca/encoja de forma proporcional con el tamaño de la diapositiva. Se
+   * acota entre un mínimo legible y un máximo cómodo.
+   */
+  font-size: clamp(0.75rem, 1.8cqw, 1.5rem);
+  container-type: inline-size;
+}
+
+/*
+ * Fallback sin ResizeObserver (p. ej. jsdom): la diapositiva conserva 16:9 por
+ * CSS y ocupa el mayor espacio posible dentro del marco.
+ */
+.vista-diapositivas__diapositiva--auto {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* --- Indicador "actual de total" (R2.4) --------------------------------- */
+.vista-diapositivas__indicador {
+  margin: 0;
+  text-align: center;
+  font-size: var(--texto-sm);
+  font-weight: var(--peso-semi);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  color: var(--color-turquesa-200);
+}
+
+/* --- Estado vacío ------------------------------------------------------- */
+.vista-diapositivas--vacia {
+  align-items: center;
+  justify-content: center;
+  padding: var(--espacio-6);
+  color: var(--color-texto-suave);
+}

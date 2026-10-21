@@ -1,0 +1,72 @@
+/*
+ * Estilos de la vista previa de la siguiente diapositiva — R5.7.
+ *
+ * Panel compacto, de menor jerarquía que el contenido principal del presentador.
+ * Consume los tokens del tema (theme.css).
+ */
+
+.vista-previa {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-2);
+  padding: var(--espacio-4);
+  background-color: var(--color-superficie-alt);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-md);
+}
+
+.vista-previa__encabezado {
+  margin: 0;
+  font-size: var(--texto-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-texto-suave);
+}
+
+.vista-previa__posicion {
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.vista-previa__titulo {
+  margin: 0;
+  font-size: var(--texto-xl);
+  font-weight: 700;
+  color: var(--color-texto);
+}
+
+.vista-previa__resumen {
+  margin: 0;
+  font-size: var(--texto-base);
+  color: var(--color-texto-suave);
+}
+
+.vista-previa__objetivos {
+  margin: 0;
+  padding-left: var(--espacio-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-1);
+}
+
+.vista-previa__objetivo {
+  font-size: var(--texto-sm);
+  color: var(--color-texto);
+}
+
+/* --- Estado de fin de sesión -------------------------------------------- */
+.vista-previa--fin .vista-previa__fin-texto {
+  margin: 0;
+  font-size: var(--texto-xl);
+  font-weight: 700;
+  color: var(--color-texto);
+}
+
+.vista-previa--fin .vista-previa__fin-detalle {
+  margin: 0;
+  font-size: var(--texto-sm);
+  color: var(--color-texto-suave);
+}

@@ -1,0 +1,101 @@
+/*
+ * Estilos compartidos de los sub-componentes de layout de diapositiva.
+ *
+ * Cada layout estructura el título y los bloques de contenido de una
+ * diapositiva. Consume los tokens del tema (theme.css). El tamaño del texto se
+ * expresa en unidades relativas para escalar con el contenedor 16:9, cuyo
+ * `font-size` base lo fija VistaDiapositivas en función del ancho.
+ */
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  /* Padding generoso arriba/abajo (relativo al alto de la diapositiva) para
+     aprovechar el espacio en lugar de amontonar el contenido arriba. El
+     centrado vertical del cuerpo (ver .layout__cuerpo) elimina el hueco. */
+  padding: 5% 6%;
+  gap: var(--espacio-4);
+  overflow: auto;
+}
+
+.layout__titulo {
+  margin: 0;
+  color: var(--color-squid-ink);
+}
+
+/* Acento turquesa de marca bajo el título de las diapositivas de contenido. */
+.layout:not(.layout--titulo) .layout__titulo {
+  padding-bottom: var(--espacio-2);
+  border-bottom: 3px solid var(--color-turquesa);
+  display: inline-block;
+}
+
+.layout__cuerpo {
+  flex: 1 1 auto;
+  min-height: 0;
+  /* Centra verticalmente el contenido dentro del espacio disponible para
+     evitar el gran hueco vacío en la parte inferior de la diapositiva. */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Cabecera de las diapositivas especializadas: título + insignia de plano. */
+.layout__cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacio-4);
+  flex-wrap: wrap;
+}
+
+/* --- Layout de título (portada / separadores) --------------------------- */
+.layout--titulo {
+  position: relative;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  gap: var(--espacio-6);
+  background: var(--grad-marca);
+  color: var(--color-texto-invertido);
+  overflow: hidden;
+}
+
+/* Barra de acento turquesa a la izquierda de la portada. */
+.layout--titulo::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 18%;
+  bottom: 18%;
+  width: 6px;
+  border-radius: 0 var(--radio-pildora) var(--radio-pildora) 0;
+  background: var(--grad-turquesa);
+}
+
+.layout--titulo .layout__titulo {
+  position: relative;
+  color: var(--color-texto-invertido);
+  font-size: var(--texto-4xl);
+  font-weight: var(--peso-extra);
+  letter-spacing: -0.02em;
+  border-bottom: none;
+}
+
+.layout--titulo .bloque-texto,
+.layout--titulo .bloque-lista {
+  color: var(--color-texto-invertido);
+}
+
+/* En portada, el código y las notas conservan su fondo claro para legibilidad. */
+.layout--titulo .bloque-nota {
+  color: var(--color-texto);
+}
+
+/* --- Pie informativo de las diapositivas especializadas ----------------- */
+.layout__pie {
+  font-size: var(--texto-sm);
+  color: var(--color-texto-suave);
+}
