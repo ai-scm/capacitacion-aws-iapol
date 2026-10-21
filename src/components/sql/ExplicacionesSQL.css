@@ -1,0 +1,120 @@
+/*
+ * Estilos de las explicaciones de SQL (ExplicacionesSQL) — R8.
+ *
+ * Diseño en tarjetas con una rejilla responsive y un bloque de código SQL
+ * legible. Se usan variables CSS con valores de reserva (fallback) para que el
+ * tema completo pueda definirse en la tarea 13.1 sin reescribir este archivo:
+ * basta con declarar las variables `--sql-*` en `:root`.
+ */
+
+.explicaciones-sql {
+  display: block;
+}
+
+.explicaciones-sql__encabezado {
+  margin-bottom: 1rem;
+}
+
+.explicaciones-sql__encabezado-titulo {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--sql-titulo-fg, #0f1b2d);
+}
+
+.explicaciones-sql__encabezado-subtitulo {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--sql-subtitulo-fg, #44546a);
+}
+
+/* Rejilla responsive de tarjetas: se adapta al ancho disponible (R17.2). */
+.explicaciones-sql__tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.explicaciones-sql__tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid var(--sql-tarjeta-border, #d9e0e8);
+  border-radius: 8px;
+  background: var(--sql-tarjeta-bg, #ffffff);
+}
+
+.explicaciones-sql__titulo {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--sql-tarjeta-titulo-fg, #0b4a8a);
+}
+
+.explicaciones-sql__explicacion {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--sql-texto-fg, #1f2a37);
+}
+
+.explicaciones-sql__ejemplo {
+  margin: 0;
+}
+
+.explicaciones-sql__ejemplo-titulo {
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--sql-caption-fg, #44546a);
+}
+
+/* Bloque de código SQL: monoespaciado, con desbordamiento horizontal seguro. */
+.explicaciones-sql__codigo {
+  margin: 0;
+  padding: 0.75rem;
+  border: 1px solid var(--sql-codigo-border, #233044);
+  border-radius: 6px;
+  background: var(--sql-codigo-bg, #0f1b2d);
+  color: var(--sql-codigo-fg, #e6edf3);
+  font-family: var(
+    --sql-codigo-font,
+    ui-monospace,
+    'SFMono-Regular',
+    'Menlo',
+    'Consolas',
+    monospace
+  );
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  overflow-x: auto;
+  white-space: pre;
+  tab-size: 2;
+}
+
+.explicaciones-sql__codigo code {
+  font: inherit;
+  color: inherit;
+}
+
+/* Nota específica del concepto (JOIN, vistas). */
+.explicaciones-sql__nota-concepto {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--sql-nota-concepto-fg, #334155);
+}
+
+/* Nota permanente de ejemplo didáctico (R8.5): tono de advertencia/atención. */
+.explicaciones-sql__nota-didactica {
+  margin: 0;
+  margin-top: auto;
+  padding: 0.5rem 0.625rem;
+  border-left: 3px solid var(--sql-nota-didactica-border, #f0c879);
+  border-radius: 4px;
+  background: var(--sql-nota-didactica-bg, #fff4e0);
+  color: var(--sql-nota-didactica-fg, #8a5300);
+  font-size: 0.75rem;
+  line-height: 1.45;
+}

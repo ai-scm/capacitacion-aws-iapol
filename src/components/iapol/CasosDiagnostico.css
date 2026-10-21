@@ -1,0 +1,110 @@
+/*
+ * Estilos de los casos de diagnóstico (CasosDiagnostico) — R19.
+ *
+ * Diseño en tarjetas con rejilla responsive. Cada tarjeta lista las causas
+ * posibles de un síntoma y cierra con la nota permanente de que no constituyen
+ * un diagnóstico definitivo. Se usan variables CSS con valores de reserva
+ * (fallback) para que el tema completo pueda definirse en la tarea 13.1 sin
+ * reescribir este archivo: basta con declarar las variables `--diag-*` en
+ * `:root`.
+ */
+
+.casos-diagnostico {
+  display: block;
+}
+
+.casos-diagnostico__encabezado {
+  margin-bottom: 1rem;
+}
+
+.casos-diagnostico__encabezado-titulo {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--diag-titulo-fg, #0f1b2d);
+}
+
+.casos-diagnostico__encabezado-subtitulo {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--diag-subtitulo-fg, #44546a);
+}
+
+/* Rejilla responsive de tarjetas: se adapta al ancho disponible (R17.2). */
+.casos-diagnostico__tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.casos-diagnostico__tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  padding: 1rem;
+  border: 1px solid var(--diag-tarjeta-border, #d9e0e8);
+  border-radius: 8px;
+  background: var(--diag-tarjeta-bg, #ffffff);
+}
+
+.casos-diagnostico__tarjeta-encabezado {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.casos-diagnostico__numero {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--diag-numero-fg, #0b4a8a);
+}
+
+.casos-diagnostico__caso {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--diag-caso-fg, #0f1b2d);
+}
+
+.casos-diagnostico__causas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.casos-diagnostico__causas-titulo {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--diag-causas-titulo-fg, #44546a);
+}
+
+.casos-diagnostico__causas-lista {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.casos-diagnostico__causa {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--diag-texto-fg, #1f2a37);
+}
+
+/* Nota permanente de diagnóstico no definitivo (R19.3): tono informativo. */
+.casos-diagnostico__nota {
+  margin: 0;
+  margin-top: auto;
+  padding: 0.5rem 0.625rem;
+  border-left: 3px solid var(--diag-nota-border, #9ec5ec);
+  border-radius: 4px;
+  background: var(--diag-nota-bg, #e6f0fb);
+  color: var(--diag-nota-fg, #0b4a8a);
+  font-size: 0.75rem;
+  line-height: 1.45;
+}

@@ -1,0 +1,128 @@
+/*
+ * Estilos de los identificadores de Amazon Quick e IAPOL
+ * (IdentificadoresIAPOL) — R18, R21.4.
+ *
+ * Diseño en tarjetas con rejilla responsive. Las tarjetas de campos propios de
+ * IAPOL se diferencian visualmente (borde de acento) y se rotulan con la
+ * insignia del plano IAPOL. Se usan variables CSS con valores de reserva
+ * (fallback) para que el tema completo pueda definirse en la tarea 13.1 sin
+ * reescribir este archivo: basta con declarar las variables `--iapol-ids-*` en
+ * `:root`.
+ */
+
+.identificadores-iapol {
+  display: block;
+}
+
+.identificadores-iapol__encabezado {
+  margin-bottom: 1rem;
+}
+
+.identificadores-iapol__encabezado-titulo {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--iapol-ids-titulo-fg, #0f1b2d);
+}
+
+.identificadores-iapol__encabezado-subtitulo {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--iapol-ids-subtitulo-fg, #44546a);
+}
+
+/* Rejilla responsive de tarjetas: se adapta al ancho disponible (R17.2). */
+.identificadores-iapol__tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.identificadores-iapol__tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid var(--iapol-ids-tarjeta-border, #d9e0e8);
+  border-radius: 8px;
+  background: var(--iapol-ids-tarjeta-bg, #ffffff);
+}
+
+/* Campos propios de IAPOL: acento visual del plano institucional. */
+.identificadores-iapol__tarjeta--iapol {
+  border-color: var(--iapol-ids-tarjeta-iapol-border, #c3b2e8);
+  border-left-width: 4px;
+  background: var(--iapol-ids-tarjeta-iapol-bg, #faf8ff);
+}
+
+.identificadores-iapol__tarjeta-encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.identificadores-iapol__tarjeta-titulo {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.identificadores-iapol__nombre {
+  font-family: var(
+    --iapol-ids-mono-font,
+    ui-monospace,
+    'SFMono-Regular',
+    'Menlo',
+    'Consolas',
+    monospace
+  );
+  font-size: 0.9375rem;
+  color: var(--iapol-ids-nombre-fg, #0b4a8a);
+}
+
+.identificadores-iapol__ambito {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--iapol-ids-ambito-fg, #44546a);
+}
+
+.identificadores-iapol__descripcion {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--iapol-ids-texto-fg, #1f2a37);
+}
+
+/* Advertencia de corroboración interna de los campos IAPOL (R18.2). */
+.identificadores-iapol__advertencia {
+  margin: 0;
+  margin-top: auto;
+  padding: 0.5rem 0.625rem;
+  border-left: 3px solid var(--iapol-ids-advertencia-border, #c3b2e8);
+  border-radius: 4px;
+  background: var(--iapol-ids-advertencia-bg, #efeafb);
+  color: var(--iapol-ids-advertencia-fg, #4b2e83);
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+/*
+ * Advertencia permanente de embebido (R18.3): tono de advertencia/atención
+ * para que destaque bajo las tarjetas.
+ */
+.identificadores-iapol__advertencia-embebido {
+  margin: 1rem 0 0;
+  padding: 0.75rem 0.875rem;
+  border-left: 4px solid var(--iapol-ids-embebido-border, #f0c879);
+  border-radius: 6px;
+  background: var(--iapol-ids-embebido-bg, #fff4e0);
+  color: var(--iapol-ids-embebido-fg, #8a5300);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.identificadores-iapol__advertencia-titulo {
+  font-weight: 700;
+}

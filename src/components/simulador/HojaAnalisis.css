@@ -1,0 +1,149 @@
+/*
+ * Estilos de las tres hojas de análisis (HojaAnalisis) — R11.
+ *
+ * Diseño en dos bloques: un control segmentado (pestañas) para elegir la
+ * Hoja_Analisis y un panel que muestra las visualizaciones de la hoja activa
+ * (KPIs, gráficos, tabla o estado vacío). Se reutilizan variables CSS con
+ * valores de reserva para integrarse con el tema completo (tarea 13.1) sin
+ * reescribir este archivo; los nombres de token comparten prefijo con
+ * SimuladorDashboards.css.
+ */
+
+.hoja-analisis {
+  display: block;
+}
+
+/* Control segmentado de selección de hoja (R11.1, R11.2). */
+.hoja__pestanas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin-bottom: 1rem;
+}
+
+.hoja__pestana {
+  padding: 0.5rem 0.875rem;
+  border: 1px solid var(--sim-boton-border, #0b4a8a);
+  border-radius: 999px;
+  background: var(--sim-grupo-bg, #ffffff);
+  color: var(--sim-boton-border, #0b4a8a);
+  font: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hoja__pestana--activa {
+  background: var(--sim-boton-bg, #0b4a8a);
+  color: var(--sim-boton-fg, #ffffff);
+}
+
+/* Panel de la hoja activa. */
+.hoja__panel {
+  min-height: 160px;
+  padding: 1rem;
+  border: 1px solid var(--sim-resultado-border, #d9e0e8);
+  border-radius: 8px;
+  background: var(--sim-resultado-bg, #fbfcfe);
+}
+
+.hoja__titulo {
+  margin: 0 0 1rem;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--sim-titulo-fg, #0f1b2d);
+}
+
+.hoja__contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* KPIs. */
+.hoja__kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+}
+
+.hoja__kpi {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem;
+  border: 1px solid var(--sim-kpi-border, #d9e0e8);
+  border-radius: 8px;
+  background: var(--sim-kpi-bg, #ffffff);
+  text-align: center;
+}
+
+.hoja__kpi-valor {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--sim-kpi-valor-fg, #0b4a8a);
+}
+
+.hoja__kpi-titulo {
+  font-size: 0.75rem;
+  color: var(--sim-kpi-titulo-fg, #44546a);
+}
+
+/* Bloques de visualización (gráficos/tabla). */
+.hoja__bloque {
+  display: block;
+}
+
+.hoja__bloque-titulo {
+  margin: 0 0 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--sim-grupo-titulo-fg, #0b4a8a);
+}
+
+.hoja__grafico {
+  width: 100%;
+}
+
+/* Tabla del análisis detallado. */
+.hoja__tabla-contenedor {
+  overflow-x: auto;
+}
+
+.hoja__tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+
+.hoja__tabla th,
+.hoja__tabla td {
+  padding: 0.375rem 0.625rem;
+  border-bottom: 1px solid var(--sim-tabla-border, #e3e8ef);
+  text-align: left;
+}
+
+.hoja__tabla th {
+  font-weight: 700;
+  color: var(--sim-tabla-th-fg, #0b4a8a);
+  background: var(--sim-tabla-th-bg, #eef3f9);
+}
+
+.hoja__nota {
+  margin: 0.5rem 0 0;
+  font-size: 0.75rem;
+  color: var(--sim-subtitulo-fg, #44546a);
+}
+
+/* Estado vacío. */
+.hoja__vacio {
+  margin: 0;
+  padding: 1.25rem;
+  border: 1px dashed var(--sim-vacio-border, #c4ccd6);
+  border-radius: 8px;
+  background: var(--sim-vacio-bg, #f7f9fc);
+  color: var(--sim-vacio-fg, #44546a);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: center;
+}

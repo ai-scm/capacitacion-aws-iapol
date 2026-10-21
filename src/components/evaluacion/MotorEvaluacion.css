@@ -1,0 +1,245 @@
+/*
+ * Estilos del Motor de evaluación (MotorEvaluacion) — R13.
+ *
+ * Preguntas agrupadas por área de contenido, con opciones accesibles (radio
+ * dentro de fieldset/legend) y retroalimentación diferenciada por color. Se
+ * usan variables CSS con valores de reserva (fallback) para integrarse con el
+ * tema completo (tarea 13.1) sin reescribir este archivo: basta con declarar
+ * las variables `--eval-*` en `:root`.
+ */
+
+.motor-evaluacion {
+  display: block;
+}
+
+.motor-evaluacion__encabezado {
+  margin-bottom: 1.25rem;
+}
+
+.motor-evaluacion__titulo {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--eval-titulo-fg, #0f1b2d);
+}
+
+.motor-evaluacion__intro {
+  margin: 0 0 0.75rem;
+  font-size: 0.9375rem;
+  color: var(--eval-texto-fg, #44546a);
+}
+
+.motor-evaluacion__nota-instructor {
+  margin: 0;
+  padding: 0.625rem 0.75rem;
+  font-size: 0.8125rem;
+  color: var(--eval-nota-fg, #5a4a00);
+  background: var(--eval-nota-bg, #fff8e1);
+  border: 1px solid var(--eval-nota-borde, #ffe082);
+  border-radius: 0.375rem;
+}
+
+/* Lista de áreas de contenido. */
+.motor-evaluacion__areas,
+.motor-evaluacion__preguntas {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.motor-evaluacion__area {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--eval-area-bg, #f7f9fc);
+  border: 1px solid var(--eval-area-borde, #dbe2ec);
+  border-radius: 0.5rem;
+}
+
+.motor-evaluacion__area-encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--eval-area-borde, #dbe2ec);
+}
+
+.motor-evaluacion__area-titulo {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--eval-titulo-fg, #0f1b2d);
+}
+
+.motor-evaluacion__area-ponderacion {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--eval-pond-fg, #1b4f9c);
+  background: var(--eval-pond-bg, #e7f0fb);
+  padding: 0.125rem 0.5rem;
+  border-radius: 999px;
+}
+
+.motor-evaluacion__item {
+  margin-bottom: 1rem;
+}
+
+.motor-evaluacion__item:last-child {
+  margin-bottom: 0;
+}
+
+.motor-evaluacion__form {
+  margin: 0;
+}
+
+.motor-evaluacion__fieldset {
+  margin: 0;
+  padding: 0.75rem;
+  border: 1px solid var(--eval-pregunta-borde, #e1e7f0);
+  border-radius: 0.375rem;
+  background: var(--eval-pregunta-bg, #ffffff);
+}
+
+.motor-evaluacion__enunciado {
+  padding: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--eval-titulo-fg, #0f1b2d);
+}
+
+.motor-evaluacion__numero {
+  color: var(--eval-pond-fg, #1b4f9c);
+}
+
+.motor-evaluacion__opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  margin-top: 0.625rem;
+}
+
+.motor-evaluacion__opcion {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.375rem 0.5rem;
+  font-size: 0.9375rem;
+  color: var(--eval-texto-fg, #2a3444);
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.motor-evaluacion__opcion:hover {
+  background: var(--eval-opcion-hover-bg, #f0f4fa);
+}
+
+.motor-evaluacion__opcion input {
+  margin-top: 0.2rem;
+}
+
+.motor-evaluacion__acciones {
+  margin-top: 0.75rem;
+}
+
+.motor-evaluacion__enviar {
+  font: inherit;
+  font-weight: 600;
+  color: var(--eval-boton-fg, #ffffff);
+  background: var(--eval-boton-bg, #1b4f9c);
+  border: 1px solid var(--eval-boton-bg, #1b4f9c);
+  border-radius: 0.375rem;
+  padding: 0.4375rem 0.875rem;
+  cursor: pointer;
+}
+
+.motor-evaluacion__enviar:hover {
+  background: var(--eval-boton-hover-bg, #163f7d);
+}
+
+.motor-evaluacion__mensaje-vacio {
+  margin: 0.625rem 0 0;
+  padding: 0.5rem 0.625rem;
+  font-size: 0.8125rem;
+  color: var(--eval-aviso-fg, #8a4b00);
+  background: var(--eval-aviso-bg, #fff3e0);
+  border: 1px solid var(--eval-aviso-borde, #ffcc80);
+  border-radius: 0.375rem;
+}
+
+.motor-evaluacion__feedback {
+  margin-top: 0.625rem;
+  padding: 0.625rem 0.75rem;
+  border-radius: 0.375rem;
+  border: 1px solid transparent;
+}
+
+.motor-evaluacion__feedback--correcto {
+  color: var(--eval-ok-fg, #1b5e20);
+  background: var(--eval-ok-bg, #e8f5e9);
+  border-color: var(--eval-ok-borde, #a5d6a7);
+}
+
+.motor-evaluacion__feedback--incorrecto {
+  color: var(--eval-err-fg, #8e1414);
+  background: var(--eval-err-bg, #fdecea);
+  border-color: var(--eval-err-borde, #f1aeae);
+}
+
+.motor-evaluacion__veredicto {
+  margin: 0 0 0.25rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.motor-evaluacion__explicacion {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.motor-evaluacion__resultado {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--eval-resultado-bg, #f0f4fa);
+  border: 1px solid var(--eval-area-borde, #dbe2ec);
+  border-radius: 0.5rem;
+}
+
+.motor-evaluacion__progreso {
+  margin: 0 0 0.375rem;
+  font-size: 0.875rem;
+  color: var(--eval-texto-fg, #44546a);
+}
+
+.motor-evaluacion__puntuacion {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: var(--eval-titulo-fg, #0f1b2d);
+}
+
+.motor-evaluacion__umbral {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.motor-evaluacion__umbral--aprobado {
+  color: var(--eval-ok-fg, #1b5e20);
+}
+
+.motor-evaluacion__umbral--no-aprobado {
+  color: var(--eval-err-fg, #8e1414);
+}
+
+.motor-evaluacion__umbral--pendiente {
+  color: var(--eval-texto-fg, #44546a);
+  font-weight: 500;
+}
+
+/* Preferencia de movimiento reducido: sin transiciones decorativas. */
+@media (prefers-reduced-motion: reduce) {
+  .motor-evaluacion * {
+    transition: none !important;
+  }
+}

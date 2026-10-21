@@ -1,0 +1,278 @@
+/*
+ * Estilos del Simulador_Dashboards (SimuladorDashboards) — R10, R12.
+ *
+ * Diseño en tres bloques: encabezado con aviso de Simulación local, panel de
+ * controles (campos, tipo de visualización y filtro de fecha) y área de
+ * resultado (KPIs, gráficos, tabla o estado vacío). Se usan variables CSS con
+ * valores de reserva para integrarse con el tema completo (tarea 13.1) sin
+ * reescribir este archivo.
+ */
+
+.simulador {
+  display: block;
+}
+
+.simulador__encabezado {
+  margin-bottom: 1rem;
+}
+
+.simulador__encabezado-fila {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+}
+
+.simulador__titulo {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--sim-titulo-fg, #0f1b2d);
+}
+
+.simulador__subtitulo {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  color: var(--sim-subtitulo-fg, #44546a);
+}
+
+/* Aviso permanente de Simulación local (R10.6, R21.4). */
+.simulador__aviso-simulacion {
+  margin: 0.625rem 0 0;
+  padding: 0.5rem 0.625rem;
+  border-left: 3px solid var(--sim-aviso-border, #8a63d2);
+  border-radius: 4px;
+  background: var(--sim-aviso-bg, #f1ecfb);
+  color: var(--sim-aviso-fg, #4c2f8f);
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+/* Panel de controles. */
+.simulador__controles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.simulador__grupo {
+  margin: 0;
+  padding: 0.75rem;
+  border: 1px solid var(--sim-grupo-border, #d9e0e8);
+  border-radius: 8px;
+  background: var(--sim-grupo-bg, #ffffff);
+}
+
+.simulador__grupo-titulo {
+  padding: 0 0.25rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--sim-grupo-titulo-fg, #0b4a8a);
+}
+
+.simulador__campos,
+.simulador__tipos,
+.simulador__fechas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.simulador__fechas {
+  gap: 0.5rem;
+}
+
+.simulador__campo,
+.simulador__tipo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--sim-texto-fg, #1f2a37);
+}
+
+.simulador__campo input:disabled + span {
+  color: var(--sim-texto-deshabilitado-fg, #99a3b0);
+}
+
+.simulador__fecha {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.8125rem;
+  color: var(--sim-texto-fg, #1f2a37);
+}
+
+.simulador__fecha input {
+  padding: 0.3125rem 0.5rem;
+  border: 1px solid var(--sim-input-border, #c4ccd6);
+  border-radius: 6px;
+  font: inherit;
+}
+
+.simulador__reset {
+  align-self: flex-start;
+  padding: 0.4375rem 0.875rem;
+  border: 1px solid var(--sim-boton-border, #0b4a8a);
+  border-radius: 6px;
+  background: var(--sim-boton-bg, #0b4a8a);
+  color: var(--sim-boton-fg, #ffffff);
+  font: inherit;
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+
+.simulador__reset:disabled {
+  border-color: var(--sim-boton-deshabilitado-border, #c4ccd6);
+  background: var(--sim-boton-deshabilitado-bg, #e9edf2);
+  color: var(--sim-boton-deshabilitado-fg, #99a3b0);
+  cursor: not-allowed;
+}
+
+.simulador__error {
+  margin: 0.5rem 0 0;
+  font-size: 0.75rem;
+  color: var(--sim-error-fg, #b42318);
+}
+
+/* Icono del tipo de visualización junto a su etiqueta. */
+.simulador__tipo-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  color: var(--color-turquesa-texto, #0a7b86);
+  font-weight: 700;
+}
+
+/* Guía didáctica del tipo seleccionado (R10.2). */
+.simulador__guia {
+  margin-top: 0.75rem;
+  padding: 0.625rem 0.75rem;
+  border-radius: var(--radio-sm, 6px);
+  border-left: 3px solid var(--color-turquesa, #00e0e0);
+  background: var(--color-turquesa-200, #d6f7f7);
+  color: var(--color-squid-ink, #002b49);
+}
+
+.simulador__guia-titulo {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.simulador__guia-cuando,
+.simulador__guia-ejemplo {
+  margin: 0.375rem 0 0;
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+/* Resumen de lo que se está mostrando (feedback de cambios). */
+.simulador__resumen {
+  margin: 0 0 0.875rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radio-sm, 6px);
+  background: var(--color-hueso, #f2f0eb);
+  color: var(--sim-texto-fg, #1f2a37);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+/* Área de resultado. */
+.simulador__resultado {
+  min-height: 160px;
+  padding: 1rem;
+  border: 1px solid var(--sim-resultado-border, #d9e0e8);
+  border-radius: 8px;
+  background: var(--sim-resultado-bg, #fbfcfe);
+}
+
+.simulador__kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+}
+
+.simulador__kpi {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem;
+  border: 1px solid var(--sim-kpi-border, #d9e0e8);
+  border-radius: 8px;
+  background: var(--sim-kpi-bg, #ffffff);
+  text-align: center;
+}
+
+.simulador__kpi-valor {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--sim-kpi-valor-fg, #0b4a8a);
+}
+
+.simulador__kpi-titulo {
+  font-size: 0.75rem;
+  color: var(--sim-kpi-titulo-fg, #44546a);
+}
+
+.simulador__grafico {
+  width: 100%;
+}
+
+/* Tabla de datos. */
+.simulador__tabla-contenedor {
+  overflow-x: auto;
+}
+
+.simulador__tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+
+.simulador__tabla th,
+.simulador__tabla td {
+  padding: 0.375rem 0.625rem;
+  border-bottom: 1px solid var(--sim-tabla-border, #e3e8ef);
+  text-align: left;
+}
+
+.simulador__tabla th {
+  font-weight: 700;
+  color: var(--sim-tabla-th-fg, #0b4a8a);
+  background: var(--sim-tabla-th-bg, #eef3f9);
+}
+
+.simulador__tabla-nota {
+  margin: 0.5rem 0 0;
+  font-size: 0.75rem;
+  color: var(--sim-subtitulo-fg, #44546a);
+}
+
+/* Estado vacío (R10.5). */
+.simulador__vacio {
+  margin: 0;
+  padding: 1.25rem;
+  border: 1px dashed var(--sim-vacio-border, #c4ccd6);
+  border-radius: 8px;
+  background: var(--sim-vacio-bg, #f7f9fc);
+  color: var(--sim-vacio-fg, #44546a);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Advertencia permanente del dataset de ejemplo (R20.4). */
+.simulador__advertencia {
+  margin: 1rem 0 0;
+  padding: 0.5rem 0.625rem;
+  border-left: 3px solid var(--sim-advertencia-border, #f0c879);
+  border-radius: 4px;
+  background: var(--sim-advertencia-bg, #fff4e0);
+  color: var(--sim-advertencia-fg, #8a5300);
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
