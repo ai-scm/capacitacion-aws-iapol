@@ -1,0 +1,25 @@
+# Dependencias
+node_modules/
+
+# Lockfiles de gestores no autorizados (solo se permite pnpm-lock.yaml)
+package-lock.json
+yarn.lock
+
+# Salida de compilacion
+dist/
+
+# Logs y temporales
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Entorno local
+.env
+.env.*
+.DS_Store
+
+# Contexto
+plan-capacitacion.md
+.kiro/
