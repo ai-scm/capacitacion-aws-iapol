@@ -30,16 +30,17 @@ import TarjetaSesion from './TarjetaSesion.jsx';
 import './PantallaPrincipal.css';
 
 /**
- * Título global de la capacitación (R1.4). Referencia explícita a los tres ejes
- * temáticos del programa.
+ * Título global de la capacitación (R1.4). Referencia los ejes del programa:
+ * la analítica en AWS (Athena/Quick) y su implementación/geoanalítica en IAPOL.
  * @type {string}
  */
-export const TITULO_GLOBAL = 'Capacitación en Amazon Athena, Amazon Quick e IAPOL';
+export const TITULO_GLOBAL =
+  'Capacitación práctica: Amazon Athena, Amazon Quick e IAPOL (nivel 400)';
 
 /**
  * Lista ordenada de las Sesiones disponibles, derivada de `SESIONES`.
  *
- * Se ordena por `id` ascendente para presentar siempre 1, 2 y 3 en orden,
+ * Se ordena por `id` ascendente para presentar las sesiones en orden (1, 2),
  * con independencia del orden de iteración de las claves del objeto.
  *
  * @returns {Array<{ id: number, titulo: string, duracionMin?: number, diapositivas?: unknown[] }>}

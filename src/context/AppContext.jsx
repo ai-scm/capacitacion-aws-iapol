@@ -25,22 +25,22 @@
 import { createContext, useContext, useMemo, useReducer } from 'react';
 
 import { siguienteIndice, anteriorIndice } from '../domain/navegacion.js';
-import sesion1 from '../data/sesiones/sesion1.js';
-import sesion2 from '../data/sesiones/sesion2.js';
-import sesion3 from '../data/sesiones/sesion3.js';
-import sesion4 from '../data/sesiones/sesion4.js';
+import sesionA from '../data/sesiones/sesionA.js';
+import sesionB from '../data/sesiones/sesionB.js';
 
 /**
- * Mapa de sesiones disponibles indexado por su número (1 | 2 | 3 | 4).
+ * Mapa de sesiones disponibles indexado por su número (1 | 2).
  * Cada entrada es un `Sesion` con `diapositivas[]` (ver data/sesiones/*).
  *
- * @type {Record<1|2|3|4, { id: number, titulo: string, diapositivas: unknown[] }>}
+ * El programa se imparte en dos sesiones prácticas de 3 horas (nivel 400):
+ *   1 → Sesión A: AWS end-to-end e implementación de tableros en IAPOL.
+ *   2 → Sesión B: IAMAPS — Analítica Geoespacial en IAPOL.
+ *
+ * @type {Record<1|2, { id: number, titulo: string, diapositivas: unknown[] }>}
  */
 export const SESIONES = {
-  1: sesion1,
-  2: sesion2,
-  3: sesion3,
-  4: sesion4,
+  1: sesionA,
+  2: sesionB,
 };
 
 /**
@@ -64,7 +64,7 @@ export const VISTAS = [
  * Cuando no hay sesión activa (`sesionActual === null`) o la sesión no existe,
  * el total es 0.
  *
- * @param {1|2|3|4|null} sesionActual - Número de sesión activa o null.
+ * @param {1|2|null} sesionActual - Número de sesión activa o null.
  * @returns {number} Cantidad de diapositivas (>= 0).
  */
 export function totalDiapositivasDe(sesionActual) {
@@ -78,7 +78,7 @@ export function totalDiapositivasDe(sesionActual) {
  *
  * @typedef {Object} EstadoApp
  * @property {'home'|'slides'|'lab'|'simulador'|'evaluacion'|'glosario'|'recursos'} vistaActual
- * @property {1|2|3|4|null} sesionActual
+ * @property {1|2|null} sesionActual
  * @property {number} indiceDiapositiva
  * @property {boolean} pantallaCompleta
  *
@@ -212,13 +212,13 @@ export const AppContext = createContext(null);
 /**
  * @typedef {Object} AppContextValue
  * @property {'home'|'slides'|'lab'|'simulador'|'evaluacion'|'glosario'|'recursos'} vistaActual
- * @property {1|2|3|4|null} sesionActual
+ * @property {1|2|null} sesionActual
  * @property {number} indiceDiapositiva
  * @property {boolean} pantallaCompleta
  * @property {object|null} sesion - La sesión activa (datos) o null.
  * @property {number} totalDiapositivas - Cantidad de diapositivas de la sesión activa.
  * @property {object|null} diapositivaActual - La diapositiva activa o null.
- * @property {(n: 1|2|3|4) => void} irASesion
+ * @property {(n: 1|2) => void} irASesion
  * @property {(v: string) => void} irAVista
  * @property {() => void} avanzar
  * @property {() => void} retroceder
