@@ -12,12 +12,20 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
-  /* Padding generoso arriba/abajo (relativo al alto de la diapositiva) para
-     aprovechar el espacio en lugar de amontonar el contenido arriba. El
-     centrado vertical del cuerpo (ver .layout__cuerpo) elimina el hueco. */
-  padding: 5% 6%;
+  /* Padding ajustado para que el contenido llegue más cerca del borde y las
+     capturas/diagramas aprovechen casi todo el ancho de la diapositiva. */
+  padding: 3% 3.5%;
   gap: var(--espacio-4);
-  overflow: auto;
+  /* La diapositiva tiene alto fijo (16:9); si el contenido es más largo, se
+     desplaza DENTRO del recuadro en lugar de desbordarlo. */
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* La cabecera (título + insignias) no se encoge ni se desplaza con el cuerpo. */
+.layout__cabecera {
+  flex: 0 0 auto;
 }
 
 .layout__titulo {
@@ -35,11 +43,13 @@
 .layout__cuerpo {
   flex: 1 1 auto;
   min-height: 0;
-  /* Centra verticalmente el contenido dentro del espacio disponible para
-     evitar el gran hueco vacío en la parte inferior de la diapositiva. */
+  /* Alinea el contenido arriba (bajo el título) en lugar de centrarlo: evita
+     el gran hueco vacío que aparecía en la parte superior de las diapositivas
+     de contenido cortas. */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: var(--espacio-4);
 }
 
 /* Cabecera de las diapositivas especializadas: título + insignia de plano. */
@@ -98,4 +108,44 @@
 .layout__pie {
   font-size: var(--texto-sm);
   color: var(--color-texto-suave);
+}
+
+/* Contenedor de insignias (nivel + plano) en la cabecera especializada. */
+.layout__insignias {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espacio-2);
+  flex-wrap: wrap;
+}
+
+/* --- Layout de laboratorio guiado (paso a paso práctico) ---------------- */
+.layout--laboratorio-guiado {
+  padding: 3% 3.5%;
+}
+
+.layout--laboratorio-guiado .layout__cuerpo {
+  /* El paso a paso puede ser largo: alinear arriba y permitir scroll en lugar
+     de centrar verticalmente, para no comprimir los pasos. */
+  justify-content: flex-start;
+}
+
+.layout--laboratorio-guiado .layout__titulo {
+  border-bottom-color: var(--color-turquesa);
+}
+
+/* Las capturas de un laboratorio ocupan casi todo el alto disponible para que
+   se lean con comodidad; el scroll del cuerpo gestiona pasos largos. */
+.layout--laboratorio-guiado .captura__img {
+  max-height: 60vh;
+}
+
+.layout--laboratorio-guiado .captura__placeholder {
+  max-height: 60vh;
+  min-height: 120px;
+}
+
+/* La captura de cada paso aprovecha el ancho completo del item (el sangrado de
+   2.2rem se reserva solo para texto/código, no para la imagen). */
+.layout--laboratorio-guiado .bloque-pasos__item .captura {
+  margin-left: 0;
 }

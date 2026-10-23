@@ -100,15 +100,283 @@
 }
 
 .bloque-imagen img {
+  width: 100%;
   max-width: 100%;
-  max-height: 44vh;
+  max-height: 62vh;
   height: auto;
   margin: 0 auto;
   border-radius: var(--radio-md);
   display: block;
+  object-fit: contain;
 }
 
 .bloque-imagen figcaption {
   font-size: var(--texto-sm);
   color: var(--color-texto-suave);
+}
+
+/* --- Captura de consola (marco + placeholder) -------------------------- */
+.captura {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-2);
+}
+
+.captura__marco {
+  border: 1px solid var(--color-borde, #d5dbdb);
+  border-radius: var(--radio-md);
+  overflow: hidden;
+  background: var(--color-superficie, #fff);
+  box-shadow: var(--sombra-md, 0 2px 8px rgba(0, 0, 0, 0.12));
+}
+
+.captura__barra {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.6rem;
+  background: var(--color-squid-ink, #002b49);
+}
+
+.captura__semaforo {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+.captura__semaforo--r { background: #ff5f56; }
+.captura__semaforo--a { background: #ffbd2e; }
+.captura__semaforo--v { background: #27c93f; }
+
+.captura__paso {
+  margin-left: auto;
+  font-size: var(--texto-xs, 0.75rem);
+  font-weight: 700;
+  color: var(--color-turquesa, #00e0e0);
+  letter-spacing: 0.3px;
+}
+
+.captura__img {
+  display: block;
+  width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+  /* Fondo claro y neutro: reduce las franjas oscuras cuando la captura no
+     llena todo el marco, para que la imagen se perciba más grande. */
+  background: #f2f0eb;
+}
+
+.captura__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: var(--espacio-5, 1.5rem);
+  min-height: 150px;
+  text-align: center;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      var(--color-hueso, #f2f0eb),
+      var(--color-hueso, #f2f0eb) 10px,
+      #e9e6df 10px,
+      #e9e6df 20px
+    );
+  color: var(--color-texto-suave, #545b64);
+}
+
+.captura__placeholder-icono { font-size: 1.6rem; }
+
+.captura__placeholder-titulo {
+  margin: 0;
+  font-weight: 700;
+  color: var(--color-squid-ink, #002b49);
+  font-size: var(--texto-sm, 0.875rem);
+}
+
+.captura__placeholder-desc {
+  margin: 0;
+  max-width: 48ch;
+  font-size: var(--texto-sm, 0.875rem);
+  line-height: 1.4;
+}
+
+.captura__placeholder-ruta {
+  font-family: var(--fuente-mono, monospace);
+  font-size: var(--texto-xs, 0.75rem);
+  color: var(--color-turquesa-texto, #0a7b86);
+  background: #ffffffcc;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+
+.captura__leyenda {
+  font-size: var(--texto-sm, 0.875rem);
+  color: var(--color-texto-suave, #545b64);
+  line-height: 1.4;
+}
+
+.bloque-captura { margin: 0; }
+
+/* --- Callout técnico (comando / DDL / IAM / ruta) ---------------------- */
+.bloque-callout {
+  border-radius: var(--radio-md);
+  overflow: hidden;
+  border: 1px solid var(--color-squid-ink-900, #16212e);
+}
+
+.bloque-callout__barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.35rem 0.7rem;
+  background: var(--color-squid-ink, #002b49);
+  color: #fff;
+}
+
+.bloque-callout__etiqueta {
+  font-size: var(--texto-xs, 0.75rem);
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.bloque-callout__lenguaje {
+  font-size: var(--texto-xs, 0.75rem);
+  color: var(--color-turquesa, #00e0e0);
+  font-family: var(--fuente-mono, monospace);
+}
+
+.bloque-callout__codigo {
+  margin: 0;
+  padding: var(--espacio-4, 1rem);
+  background: var(--color-squid-ink-950, #0b1622);
+  color: var(--color-texto-invertido, #e6edf3);
+  overflow-x: auto;
+  font-family: var(--fuente-mono, monospace);
+  font-size: var(--texto-sm, 0.875rem);
+  line-height: 1.5;
+}
+
+.bloque-callout__codigo code { white-space: pre; }
+
+/* Acento por variante en el borde izquierdo. */
+.bloque-callout--ddl { border-left: 4px solid #1b63b0; }
+.bloque-callout--iam { border-left: 4px solid #e8830c; }
+.bloque-callout--ruta { border-left: 4px solid #1b8f4d; }
+.bloque-callout--comando { border-left: 4px solid var(--color-turquesa, #00e0e0); }
+
+.bloque-callout__nota {
+  margin: 0;
+  padding: 0.5rem 0.7rem;
+  background: var(--color-advertencia-bg, #fff4e0);
+  color: var(--color-advertencia, #8a5300);
+  font-size: var(--texto-xs, 0.75rem);
+  line-height: 1.4;
+}
+
+/* --- Paso a paso numerado ---------------------------------------------- */
+.bloque-pasos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-4, 1rem);
+  counter-reset: paso;
+}
+
+.bloque-pasos__item {
+  padding: var(--espacio-3, 0.75rem) var(--espacio-4, 1rem);
+  border: 1px solid var(--color-borde, #d5dbdb);
+  border-left: 4px solid var(--color-turquesa, #00e0e0);
+  border-radius: var(--radio-md);
+  background: var(--color-superficie, #fff);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-2, 0.5rem);
+}
+
+.bloque-pasos__cabecera {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.bloque-pasos__numero {
+  flex: 0 0 auto;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--grad-marca, var(--color-squid-ink, #002b49));
+  color: #fff;
+  font-weight: 700;
+  font-size: var(--texto-sm, 0.875rem);
+}
+
+.bloque-pasos__instruccion {
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-texto, #16191f);
+}
+
+.bloque-pasos__detalle {
+  margin: 0;
+  padding-left: 2.2rem;
+  font-size: var(--texto-sm, 0.9rem);
+  line-height: 1.5;
+  color: var(--color-texto-suave, #545b64);
+}
+
+.bloque-pasos__codigo {
+  margin: 0 0 0 2.2rem;
+  padding: var(--espacio-3, 0.75rem);
+  background: var(--color-squid-ink-950, #0b1622);
+  color: var(--color-texto-invertido, #e6edf3);
+  border-radius: var(--radio-sm);
+  overflow-x: auto;
+  font-family: var(--fuente-mono, monospace);
+  font-size: var(--texto-xs, 0.8rem);
+  line-height: 1.5;
+  white-space: pre;
+}
+
+.bloque-pasos__item .captura {
+  margin-left: 2.2rem;
+  /* Separa la captura del texto del paso (detalle/código) para que no se
+     perciba pegada o superpuesta. */
+  margin-top: var(--espacio-2, 0.5rem);
+}
+
+.bloque-pasos__verificacion {
+  margin: 0;
+  margin-left: 2.2rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radio-sm);
+  background: var(--color-turquesa-200, #d6f7f7);
+  color: var(--color-squid-ink, #002b49);
+  font-size: var(--texto-sm, 0.875rem);
+  line-height: 1.4;
+}
+
+.bloque-pasos__verificacion-etq { font-weight: 700; }
+
+/* --- Badge de nivel (300/350/400) -------------------------------------- */
+.badge-nivel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: var(--color-squid-ink, #002b49);
+  color: var(--color-turquesa, #00e0e0);
+  font-size: var(--texto-xs, 0.72rem);
+  font-weight: 700;
+  letter-spacing: 0.4px;
 }

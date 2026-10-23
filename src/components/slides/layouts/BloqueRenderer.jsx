@@ -16,6 +16,7 @@
  */
 
 import './BloqueRenderer.css';
+import CapturaConsola from './CapturaConsola.jsx';
 
 /**
  * Renderiza un único bloque de contenido según su `tipo`.
@@ -84,6 +85,95 @@ function Bloque({ bloque }) {
           ) : null}
         </figure>
       );
+
+    case 'captura':
+      // Captura de consola/portal con marco y reserva (placeholder) si falta.
+      return (
+        <div className="bloque bloque-captura">
+          <CapturaConsola
+            src={bloque.src}
+            descripcion={bloque.descripcion || bloque.alt || 'Captura de pantalla'}
+            numero={bloque.numero}
+            leyenda={bloque.leyenda}
+          />
+        </div>
+      );
+
+    case 'callout': {
+      // Llamada técnica para comandos, DDL, políticas o rutas exactas.
+      const variante = bloque.variante || 'comando';
+      const etiqueta =
+        bloque.etiqueta ||
+        (variante === 'ddl'
+          ? 'SQL / DDL'
+          : variante === 'iam'
+            ? 'Política / permisos'
+            : variante === 'ruta'
+              ? 'Ruta'
+              : 'Comando');
+      return (
+        <div className={`bloque bloque-callout bloque-callout--${variante}`}>
+          <div className="bloque-callout__barra">
+            <span className="bloque-callout__etiqueta">{etiqueta}</span>
+            {bloque.lenguaje ? (
+              <span className="bloque-callout__lenguaje">{bloque.lenguaje}</span>
+            ) : null}
+          </div>
+          <pre className="bloque-callout__codigo">
+            <code>{bloque.codigo}</code>
+          </pre>
+          {bloque.nota ? (
+            <p className="bloque-callout__nota">{bloque.nota}</p>
+          ) : null}
+        </div>
+      );
+    }
+
+    case 'pasos': {
+      // Paso a paso numerado: cada paso puede llevar detalle técnico, una
+      // captura (o su placeholder) y una verificación ("deberías ver...").
+      const pasos = Array.isArray(bloque.pasos) ? bloque.pasos : [];
+      return (
+        <ol className="bloque bloque-pasos">
+          {pasos.map((paso, i) => (
+            <li key={i} className="bloque-pasos__item">
+              <div className="bloque-pasos__cabecera">
+                <span className="bloque-pasos__numero" aria-hidden="true">
+                  {i + 1}
+                </span>
+                <p className="bloque-pasos__instruccion">{paso.instruccion}</p>
+              </div>
+              {paso.detalle ? (
+                <p className="bloque-pasos__detalle">{paso.detalle}</p>
+              ) : null}
+              {paso.codigo ? (
+                <pre className="bloque-pasos__codigo">
+                  <code>{paso.codigo}</code>
+                </pre>
+              ) : null}
+              {paso.captura || paso.capturaDescripcion ? (
+                <CapturaConsola
+                  src={paso.captura}
+                  descripcion={
+                    paso.capturaDescripcion || `Captura del paso ${i + 1}`
+                  }
+                  numero={i + 1}
+                  leyenda={paso.capturaLeyenda}
+                />
+              ) : null}
+              {paso.verificacion ? (
+                <p className="bloque-pasos__verificacion">
+                  <span className="bloque-pasos__verificacion-etq">
+                    Verifica:
+                  </span>{' '}
+                  {paso.verificacion}
+                </p>
+              ) : null}
+            </li>
+          ))}
+        </ol>
+      );
+    }
 
     default:
       // Tipo de bloque desconocido: no se renderiza nada (fallo seguro).
