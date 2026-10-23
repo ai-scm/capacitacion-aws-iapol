@@ -15,6 +15,7 @@ import LayoutContenido from './LayoutContenido.jsx';
 import LayoutDiagrama from './LayoutDiagrama.jsx';
 import LayoutSQL from './LayoutSQL.jsx';
 import LayoutLaboratorio from './LayoutLaboratorio.jsx';
+import LayoutLaboratorioGuiado from './LayoutLaboratorioGuiado.jsx';
 import LayoutSimulador from './LayoutSimulador.jsx';
 import LayoutIdentificadores from './LayoutIdentificadores.jsx';
 import LayoutDiagnostico from './LayoutDiagnostico.jsx';
@@ -26,6 +27,7 @@ export {
   LayoutDiagrama,
   LayoutSQL,
   LayoutLaboratorio,
+  LayoutLaboratorioGuiado,
   LayoutSimulador,
   LayoutIdentificadores,
   LayoutDiagnostico,
@@ -43,6 +45,7 @@ export const LAYOUTS = Object.freeze({
   diagrama: LayoutDiagrama,
   sql: LayoutSQL,
   laboratorio: LayoutLaboratorio,
+  'laboratorio-guiado': LayoutLaboratorioGuiado,
   simulador: LayoutSimulador,
   identificadores: LayoutIdentificadores,
   diagnostico: LayoutDiagnostico,

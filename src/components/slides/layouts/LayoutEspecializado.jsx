@@ -44,7 +44,11 @@ export default function LayoutEspecializado({
     >
       <header className="layout__cabecera">
         <h2 className="layout__titulo">{diapositiva.titulo}</h2>
-        {plano ? <BadgePlano plano={plano} /> : null}
+        {plano ? (
+          <span className="layout__insignias">
+            <BadgePlano plano={plano} />
+          </span>
+        ) : null}
       </header>
       <div className="layout__cuerpo">
         <BloqueRenderer contenido={diapositiva.contenido} />
