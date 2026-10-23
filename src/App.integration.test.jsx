@@ -76,7 +76,7 @@ describe('App — flujo de render entre las tres sesiones (tarea 14.2)', () => {
     }
   });
 
-  it('renderiza la pantalla principal con el título global y las tres Sesiones', () => {
+  it('renderiza la pantalla principal con el título global y las Sesiones', () => {
     render(<App />);
 
     // Título global de la capacitación (R1.4) presente al arrancar.
@@ -85,7 +85,7 @@ describe('App — flujo de render entre las tres sesiones (tarea 14.2)', () => {
     ).toBeTruthy();
 
     // Las Sesiones disponibles se muestran como tarjetas en Home.
-    expect(SESIONES_ORDENADAS.length).toBeGreaterThanOrEqual(3);
+    expect(SESIONES_ORDENADAS.length).toBeGreaterThanOrEqual(2);
     for (const sesion of SESIONES_ORDENADAS) {
       const titulo = screen.getByText(sesion.titulo);
       const tarjeta = titulo.closest('button');
@@ -138,8 +138,8 @@ describe('App — flujo de render entre las tres sesiones (tarea 14.2)', () => {
       expect(sesion.diapositivas.length).toBeGreaterThan(0);
     }
 
-    // Y el flujo de navegación cubre las sesiones distintas (1, 2, 3 y 4).
+    // Y el flujo de navegación cubre las dos sesiones del programa (1 y 2).
     const ids = SESIONES_ORDENADAS.map((s) => s.id);
-    expect(new Set(ids)).toEqual(new Set([1, 2, 3, 4]));
+    expect(new Set(ids)).toEqual(new Set([1, 2]));
   });
 });

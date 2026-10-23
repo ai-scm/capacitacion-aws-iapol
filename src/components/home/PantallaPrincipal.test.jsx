@@ -86,8 +86,8 @@ describe('PantallaPrincipal (R1)', () => {
   it('muestra todas las Sesiones disponibles al cargarse (R1.1)', () => {
     renderizarPantalla();
 
-    // Se muestran todas las sesiones registradas (al menos las tres básicas).
-    expect(SESIONES_ORDENADAS.length).toBeGreaterThanOrEqual(3);
+    // Se muestran todas las sesiones registradas (programa de 2 sesiones de 3h).
+    expect(SESIONES_ORDENADAS.length).toBeGreaterThanOrEqual(2);
     for (const sesion of SESIONES_ORDENADAS) {
       expect(screen.getByText(sesion.titulo)).toBeTruthy();
     }

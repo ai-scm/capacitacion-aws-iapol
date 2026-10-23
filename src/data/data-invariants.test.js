@@ -4,8 +4,8 @@
  * Verifican propiedades estructurales del contenido empaquetado que el resto de
  * la plataforma asume como ciertas:
  *
- *  - Sesiones: 15–60 diapositivas, duración esperada (120 min las sesiones
- *    1–3; 60 min la sesión 4), ids de diapositiva únicos (R2.5).
+ *  - Sesiones: 15–60 diapositivas, duración esperada (180 min cada sesión,
+ *    nivel 400), ids de diapositiva únicos (R2.5).
  *  - Catálogo de consultas demo: 5–20 entradas bien formadas (R9.1).
  *  - Rúbrica de evaluación: suma exactamente 100 y coincide con
  *    RUBRICA_POR_DEFECTO del motor de puntuación (R13.1).
@@ -20,10 +20,8 @@
  * Requirements: 2.5, 9.1, 13.1, 14.1, 20.2
  */
 
-import sesion1 from './sesiones/sesion1.js';
-import sesion2 from './sesiones/sesion2.js';
-import sesion3 from './sesiones/sesion3.js';
-import sesion4 from './sesiones/sesion4.js';
+import sesionA from './sesiones/sesionA.js';
+import sesionB from './sesiones/sesionB.js';
 import { CATALOGO_CONSULTAS } from './consultas/catalogo-consultas.js';
 import { RUBRICA } from './evaluacion/rubrica.js';
 import { PREGUNTAS } from './evaluacion/preguntas.js';
@@ -32,22 +30,18 @@ import { CAMPOS_DATASET } from './dataset/campos.js';
 import { RUBRICA_POR_DEFECTO } from '../domain/puntuacion.js';
 
 const SESIONES = [
-  ['sesion1', sesion1],
-  ['sesion2', sesion2],
-  ['sesion3', sesion3],
-  ['sesion4', sesion4],
+  ['sesionA', sesionA],
+  ['sesionB', sesionB],
 ];
 
 /**
- * Duración esperada por sesión (minutos). Las sesiones 1–3 duran 120 min; la
- * sesión 4 (Analítica Geoespacial en IAPOL) es complementaria y dura 60 min.
+ * Duración esperada por sesión (minutos). El programa son dos sesiones
+ * prácticas de 3 horas (180 min) de nivel 400.
  * @type {Record<string, number>}
  */
 const DURACION_ESPERADA = {
-  sesion1: 120,
-  sesion2: 120,
-  sesion3: 120,
-  sesion4: 60,
+  sesionA: 180,
+  sesionB: 180,
 };
 
 const AREAS_RUBRICA = [
@@ -74,7 +68,7 @@ describe('Invariantes de datos', () => {
     );
 
     it.each(SESIONES)(
-      '%s dura los minutos esperados (120 las sesiones 1–3; 60 la sesión 4)',
+      '%s dura 180 minutos (sesión práctica de 3 horas, nivel 400)',
       (nombre, sesion) => {
         expect(sesion.duracionMin).toBe(DURACION_ESPERADA[nombre]);
       },
