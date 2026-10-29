@@ -85,6 +85,24 @@ export default function ExportarPDF() {
         </p>
       </div>
 
+      <div className="exportar-pdf__descargas no-imprimir">
+        <h2 className="exportar-pdf__descargas-titulo">Documentos descargables</h2>
+        <a
+          className="exportar-pdf__descarga"
+          href="/docs/guia-despliegue-amplify.docx"
+          download="guia-despliegue-amplify.docx"
+        >
+          <span aria-hidden="true">⬇</span>
+          {' '}
+          Descargar guía de despliegue en AWS Amplify (Word)
+        </a>
+        <p className="exportar-pdf__descargas-ayuda">
+          Documento Word con el paso a paso para desplegar esta plataforma en AWS
+          Amplify, la configuración de build con pnpm y la solución a los
+          problemas de compilación más comunes.
+        </p>
+      </div>
+
       <VistaImpresion alcance={alcance} />
     </div>
   );
