@@ -1,0 +1,80 @@
+/*
+ * Estilos del control de exportación a PDF (ExportarPDF).
+ *
+ * La barra de control (selector + botón + ayuda) es parte de la UI normal y se
+ * oculta al imprimir mediante la utilidad `.no-imprimir`. La previsualización
+ * de diapositivas la estiliza VistaImpresion.css.
+ */
+
+.exportar-pdf {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-4, 1rem);
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: var(--espacio-4, 1rem);
+}
+
+.exportar-pdf__barra {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--espacio-4, 1rem);
+  padding: var(--espacio-4, 1rem);
+  background-color: var(--color-superficie, #ffffff);
+  border: 1px solid var(--color-borde, #d9d6cd);
+  border-radius: var(--radio-md, 8px);
+}
+
+.exportar-pdf__campo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-1, 0.25rem);
+}
+
+.exportar-pdf__label {
+  font-size: var(--texto-sm, 0.875rem);
+  font-weight: var(--peso-semi, 600);
+  color: var(--color-texto, #16212e);
+}
+
+.exportar-pdf__select {
+  min-height: 40px;
+  padding: var(--espacio-2, 0.5rem) var(--espacio-3, 0.75rem);
+  border: 1px solid var(--color-borde-fuerte, #b9b5a9);
+  border-radius: var(--radio-sm, 4px);
+  background-color: var(--color-superficie, #ffffff);
+  color: var(--color-texto, #16212e);
+  font: inherit;
+}
+
+.exportar-pdf__boton {
+  min-height: 40px;
+  padding: var(--espacio-2, 0.5rem) var(--espacio-5, 1.25rem);
+  border: none;
+  border-radius: var(--radio-pildora, 999px);
+  background: var(--color-turquesa, #00e0e0);
+  color: var(--color-squid-ink, #002b49);
+  font-weight: var(--peso-bold, 700);
+  cursor: pointer;
+}
+
+.exportar-pdf__boton:hover {
+  background: var(--color-turquesa-400, #2bd9d9);
+}
+
+.exportar-pdf__ayuda {
+  flex: 1 1 16rem;
+  margin: 0;
+  font-size: var(--texto-sm, 0.875rem);
+  line-height: 1.5;
+  color: var(--color-texto-suave, #44546a);
+}
+
+/* Utilidad: elementos que no deben aparecer en el PDF impreso. */
+@media print {
+  .no-imprimir {
+    display: none !important;
+  }
+}

@@ -1,0 +1,144 @@
+/*
+ * Estilos de la vista de impresión (VistaImpresion) — exportación a PDF.
+ *
+ * Dos planos:
+ *  - En pantalla: la vista de impresión se muestra como una previsualización
+ *    vertical (una diapositiva tras otra con sus notas), dentro del flujo
+ *    normal de la aplicación, para que el usuario confirme el contenido antes
+ *    de exportar.
+ *  - Al imprimir (`@media print`): se oculta toda la UI normal de la aplicación
+ *    y SOLO se imprime la vista de impresión, con cada diapositiva en su propia
+ *    página (relación ~16:9 en orientación horizontal) y las notas del
+ *    instructor debajo.
+ *
+ * Reutiliza los tokens del tema (theme.css). No añade dependencias.
+ */
+
+.vista-impresion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-6, 1.5rem);
+  width: 100%;
+}
+
+.vista-impresion__sesion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-6, 1.5rem);
+}
+
+.vista-impresion__pagina {
+  background-color: var(--color-superficie, #ffffff);
+  color: var(--color-texto, #16212e);
+  border: 1px solid var(--color-borde, #d9d6cd);
+  border-radius: var(--radio-md, 8px);
+  overflow: hidden;
+}
+
+/* Marca superior con sesión e índice de diapositiva. */
+.vista-impresion__marca {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--espacio-2, 0.5rem);
+  padding: var(--espacio-2, 0.5rem) var(--espacio-4, 1rem);
+  background-color: var(--color-squid-ink, #002b49);
+  color: var(--color-texto-invertido, #f2f0eb);
+  font-size: var(--texto-sm, 0.875rem);
+  font-weight: var(--peso-semi, 600);
+}
+
+.vista-impresion__marca-indice {
+  font-variant-numeric: tabular-nums;
+}
+
+/*
+ * Recuadro de la diapositiva: conserva 16:9 y habilita el container query que
+ * usan los layouts (font-size relativo a cqw) replicando la vista en pantalla.
+ */
+.vista-impresion__diapositiva {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  container-type: inline-size;
+  font-size: clamp(0.75rem, 1.8cqw, 1.5rem);
+  overflow: hidden;
+}
+
+/* Notas del instructor (incluidas de forma deliberada en el PDF). */
+.vista-impresion__notas {
+  border-top: 2px solid var(--color-turquesa-texto, #0a7b86);
+  padding: var(--espacio-3, 0.75rem) var(--espacio-4, 1rem);
+  background-color: var(--color-superficie-alt, #eceae3);
+}
+
+.vista-impresion__notas-titulo {
+  margin: 0 0 var(--espacio-1, 0.25rem);
+  font-size: var(--texto-sm, 0.875rem);
+  font-weight: var(--peso-bold, 700);
+  color: var(--color-turquesa-texto, #0a7b86);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.vista-impresion__notas-texto {
+  margin: 0;
+  font-size: var(--texto-sm, 0.875rem);
+  line-height: 1.5;
+  color: var(--color-texto, #16212e);
+  white-space: pre-line;
+}
+
+/* ===================================================================== */
+/* Impresión: una diapositiva por página, sin la UI normal.              */
+/* ===================================================================== */
+@media print {
+  /* Orientación horizontal y márgenes contenidos para aprovechar la hoja. */
+  @page {
+    size: A4 landscape;
+    margin: 10mm;
+  }
+
+  /* Oculta todo lo que no sea la vista de impresión. */
+  body * {
+    visibility: hidden;
+  }
+
+  .vista-impresion,
+  .vista-impresion * {
+    visibility: visible;
+  }
+
+  .vista-impresion {
+    position: absolute;
+    inset: 0;
+    gap: 0;
+  }
+
+  .vista-impresion__sesion {
+    gap: 0;
+  }
+
+  /* Cada diapositiva ocupa su propia página impresa. */
+  .vista-impresion__pagina {
+    border: none;
+    border-radius: 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    break-after: page;
+    page-break-after: always;
+  }
+
+  /* Evita una página en blanco final tras la última diapositiva. */
+  .vista-impresion__sesion:last-child .vista-impresion__pagina:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  /* Fuerza la impresión de colores de fondo (encabezados, notas, badges). */
+  .vista-impresion__pagina,
+  .vista-impresion__marca,
+  .vista-impresion__notas {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

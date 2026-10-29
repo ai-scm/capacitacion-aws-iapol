@@ -45,7 +45,7 @@ export const SESIONES = {
 
 /**
  * Conjunto cerrado de vistas de alto nivel (router por estado).
- * @type {ReadonlyArray<'home'|'slides'|'lab'|'simulador'|'evaluacion'|'glosario'|'recursos'>}
+ * @type {ReadonlyArray<'home'|'slides'|'lab'|'simulador'|'evaluacion'|'glosario'|'recursos'|'exportar'>}
  */
 export const VISTAS = [
   'home',
@@ -55,6 +55,7 @@ export const VISTAS = [
   'evaluacion',
   'glosario',
   'recursos',
+  'exportar',
 ];
 
 /**

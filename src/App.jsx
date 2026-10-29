@@ -13,6 +13,7 @@
  *   evaluacion → MotorEvaluacion
  *   glosario   → Glosario
  *   recursos   → CentroRecursos (+ Identificadores_IAPOL + Casos_Diagnostico)
+ *   exportar   → ExportarPDF (vista imprimible de las sesiones con notas)
  *
  * Honestidad técnica y seguridad (R20, R21, R23):
  *  - No se realiza ninguna operación ni conexión a AWS/IAPOL: toda la lógica es
@@ -56,6 +57,7 @@ import DiagramaArquitectura from './components/diagrama/DiagramaArquitectura.jsx
 import IdentificadoresIAPOL from './components/iapol/IdentificadoresIAPOL.jsx';
 import CasosDiagnostico from './components/iapol/CasosDiagnostico.jsx';
 import ModoPresentador from './components/presentador/ModoPresentador.jsx';
+import ExportarPDF from './components/impresion/ExportarPDF.jsx';
 
 /**
  * Etiquetas legibles para la barra de navegación de alto nivel. Las claves son
@@ -71,6 +73,7 @@ const ETIQUETAS_VISTA = {
   evaluacion: 'Evaluación',
   glosario: 'Glosario',
   recursos: 'Recursos',
+  exportar: 'Exportar a PDF',
 };
 
 /**
@@ -262,6 +265,12 @@ function VistaActiva() {
       );
     case 'recursos':
       return <VistaRecursos />;
+    case 'exportar':
+      return (
+        <div className="app__vista app__vista--exportar">
+          <ExportarPDF />
+        </div>
+      );
     case 'home':
     default:
       return (
