@@ -107,6 +107,11 @@
   text-decoration: none;
 }
 
+/* Separación entre el texto de ayuda de un documento y el botón del siguiente. */
+.exportar-pdf__descargas-ayuda + .exportar-pdf__descarga {
+  margin-top: var(--espacio-4, 1rem);
+}
+
 .exportar-pdf__descarga:hover {
   background: var(--color-squid-ink-700, #003057);
 }

@@ -87,6 +87,7 @@ export default function ExportarPDF() {
 
       <div className="exportar-pdf__descargas no-imprimir">
         <h2 className="exportar-pdf__descargas-titulo">Documentos descargables</h2>
+
         <a
           className="exportar-pdf__descarga"
           href="/docs/guia-sesionA-practica.docx"
@@ -97,9 +98,24 @@ export default function ExportarPDF() {
           Descargar guía práctica de la Sesión A (Word)
         </a>
         <p className="exportar-pdf__descargas-ayuda">
-          Documento Word con la guía de uso práctico de la Sesión A: el flujo de
-          AWS de punta a punta (S3, Glue, Athena y Amazon Quick) paso a paso, con
-          los objetivos y los comandos de ejemplo de cada laboratorio.
+          Guía de uso práctico de la Sesión A: el flujo de AWS de punta a punta
+          (S3, Glue, Athena y Amazon Quick) paso a paso, con los objetivos y los
+          comandos de ejemplo de cada laboratorio.
+        </p>
+
+        <a
+          className="exportar-pdf__descarga"
+          href="/docs/guia-sesionB-practica.docx"
+          download="guia-sesionB-practica.docx"
+        >
+          <span aria-hidden="true">⬇</span>
+          {' '}
+          Descargar guía práctica de la Sesión B (Word)
+        </a>
+        <p className="exportar-pdf__descargas-ayuda">
+          Guía de uso práctico de la Sesión B: publicación del dashboard en
+          Amazon Quick, identificadores, el flujo conceptual de integración con
+          IAPOL y la Analítica Geoespacial (IAMAPS).
         </p>
       </div>
 
