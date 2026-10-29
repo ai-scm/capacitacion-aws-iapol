@@ -4,13 +4,20 @@ frontend:
     preBuild:
       commands:
         # La imagen de build de Amplify no trae pnpm preinstalado.
-        # Lo habilitamos con Corepack (incluido en Node) a la version exacta
-        # fijada en package.json (packageManager: pnpm@12.14.0), para respetar
-        # la politica de "solo pnpm" del proyecto (preinstall rechaza npm/yarn).
-        - corepack enable
-        - corepack prepare pnpm@12.14.0 --activate
+        #
+        # No usamos Corepack porque el que incluye la imagen (Node 22.x) tiene
+        # un bug conocido: resuelve el binario de pnpm por una ruta hardcodeada
+        # (bin/pnpm.cjs) que las versiones nuevas de pnpm ya no usan, y falla
+        # con "Cannot find module .../bin/pnpm.cjs" (MODULE_NOT_FOUND).
+        #
+        # En su lugar instalamos pnpm global con npm a la version exacta fijada
+        # en package.json. Esto NO viola la politica "solo pnpm": el script
+        # preinstall que rechaza npm/yarn solo corre al instalar las
+        # dependencias del PROYECTO; 'npm install -g pnpm' instala una
+        # herramienta global y no ejecuta ese hook.
+        - npm install -g pnpm@12.14.0
         - pnpm --version
-        # Instalacion reproducible a partir de pnpm-lock.yaml.
+        # Instalacion reproducible de las dependencias del proyecto con pnpm.
         - pnpm install --frozen-lockfile
     build:
       commands:
