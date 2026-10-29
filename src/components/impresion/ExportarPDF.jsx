@@ -89,17 +89,17 @@ export default function ExportarPDF() {
         <h2 className="exportar-pdf__descargas-titulo">Documentos descargables</h2>
         <a
           className="exportar-pdf__descarga"
-          href="/docs/guia-despliegue-amplify.docx"
-          download="guia-despliegue-amplify.docx"
+          href="/docs/guia-sesionA-practica.docx"
+          download="guia-sesionA-practica.docx"
         >
           <span aria-hidden="true">⬇</span>
           {' '}
-          Descargar guía de despliegue en AWS Amplify (Word)
+          Descargar guía práctica de la Sesión A (Word)
         </a>
         <p className="exportar-pdf__descargas-ayuda">
-          Documento Word con el paso a paso para desplegar esta plataforma en AWS
-          Amplify, la configuración de build con pnpm y la solución a los
-          problemas de compilación más comunes.
+          Documento Word con la guía de uso práctico de la Sesión A: el flujo de
+          AWS de punta a punta (S3, Glue, Athena y Amazon Quick) paso a paso, con
+          los objetivos y los comandos de ejemplo de cada laboratorio.
         </p>
       </div>
 
